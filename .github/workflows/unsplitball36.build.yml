@@ -1,14 +1,9 @@
 name: Build ZMK firmware unsplitball36
 
-on:
-  push:
-    paths:
-      - config/unsplitball36/**
-  workflow_dispatch:
+on: [push, workflow_dispatch]
 
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     with:
-      config_path: config/unsplitball36
-      build_matrix_path: config/unsplitball36/build.yaml
+      archive_name: ${{ github.sha }}
