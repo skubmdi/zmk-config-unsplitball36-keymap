@@ -114,10 +114,10 @@
 		};
 		control {
 			bindings = <
-				&hkp RC(RGUI) D		&hkp RS(RGUI) UP	&hkp RS(RGUI) DOWN	&hkp RC(RGUI) F4		&kp C_VOL_UP	&none	&none	&none	&none	&none
-				&hkp RC(RGUI) LEFT	&hkp RS(RGUI) LEFT	&hkp RS(RGUI) RIGHT	&hkp RC(RGUI) RIGHT		&kp C_MUTE		&none	&none	&none	&none	&none
-				&hkp RGUI LEFT		&hkp RGUI UP		&hkp RGUI DOWN		&hkp RGUI RIGHT			&kp C_VOL_DN	&none	&none	&none	&none	&none
-									&trans				&trans				&trans					&trans			&trans	&trans
+				&kp C_VOL_UP	&hkp RC(RGUI) D		&hkp RS(RGUI) UP	&hkp RS(RGUI) DOWN	&hkp RC(RGUI) F4		&none	&none	&none	&none	&none
+				&kp C_VOL_DN	&hkp RC(RGUI) LEFT	&hkp RS(RGUI) LEFT	&hkp RS(RGUI) RIGHT	&hkp RC(RGUI) RIGHT		&none	&none	&none	&none	&none
+				&kp C_MUTE		&hkp RGUI LEFT		&hkp RGUI UP		&hkp RGUI DOWN		&hkp RGUI RIGHT			&none	&none	&none	&none	&none
+								&trans				&trans				&trans				&trans			&trans	&trans
 			>;
 		};
 	};
