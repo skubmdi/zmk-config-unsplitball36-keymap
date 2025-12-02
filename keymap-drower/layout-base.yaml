@@ -31,11 +31,11 @@ layers:
   - .
   - /
   - 'Base Layer'
-  - {t: ESC, h: number}
-  - {t: SPACE, h: function}
-  - {t: TAB, h: control}
+  - {t: Escape, h: number}
+  - {t: Space, h: function}
+  - {t: Tab, h: control}
   - {t: かな, h: number}
-  - {t: ENTER, h: function}
+  - {t: Enter, h: function}
   function:
   - '全角 半角'
   - F2
