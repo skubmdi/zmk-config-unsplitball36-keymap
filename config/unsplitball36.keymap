@@ -48,6 +48,17 @@
 			;
 		};
 		
+		htp: htp {
+			compatible = "zmk,behavior-macro-two-param";
+			#binding-cells = <2>;
+			bindings
+					= <&macro_param_1to1>, <&macro_press &kp MACRO_PLACEHOLDER>
+					, <&macro_param_2to1>, <&macro_tap &kp MACRO_PLACEHOLDER>
+					, <&macro_pause_for_release>
+					, <&macro_param_1to1>, <&macro_release &kp MACRO_PLACEHOLDER>
+			;
+		};
+
 		home: home {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -115,10 +126,10 @@
 		};
 		window {
 			bindings = <
-				&none			&hkp RC(RGUI) F4	&hkp RS(RGUI) LEFT	&hkp RC(RGUI) D		&kp C_VOL_UP  			&none	&none	&none	&none	&none
-				&hkp LALT TAB	&hkp RC(RGUI) LEFT	&hkp RS(RGUI) RIGHT	&hkp RC(RGUI) RIGHT	&kp C_VOL_DN 			&none	&none	&none	&none	&none
-				&hkp LGUI TAB	&none				&none				&none				&kp C_MUTE				&none	&none	&none	&none	&none
-								&trans				&trans				&trans				&trans					&trans	&trans
+				&none			&hkp RC(RGUI) F4	&hkp RS(RGUI) LEFT	&hkp RC(RGUI) D		&kp C_VOL_UP	&none	&none	&none	&none	&none
+				&htp LALT TAB 	&hkp RC(RGUI) LEFT	&hkp RS(RGUI) RIGHT	&hkp RC(RGUI) RIGHT	&kp C_VOL_DN	&none	&none	&none	&none	&none
+				&hkp LGUI TAB	&none				&none				&none				&kp C_MUTE		&none	&none	&none	&none	&none
+								&trans				&trans				&trans				&trans			&trans	&trans
 			>;
 		};
 		control {
@@ -132,6 +143,7 @@
 		
 		// ctrl
 		// ctrl		{ slow-release; timeout-ms = <35>; key-positions = <20, 21>; bindings = <&mo CTRL> };
+		
 		// bootloader
 		bootloader	{ slow-release; timeout-ms = <35>; key-positions = <0 10 20>; bindings = <&bootloader>; };
 		
