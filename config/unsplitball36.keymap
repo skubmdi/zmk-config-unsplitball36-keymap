@@ -71,26 +71,6 @@
 			tapping-term-ms = <1000>;
 			bindings = <&to QWERTY>, <&to DVORAK>, <&to COLEMAK>, <&to EUCALYN>;
 		};
-		mmv_top: mmv_top {
-			compatible = "zmk,behavior-mouse-move";
-			#binding-cells = <0>;
-			x-movement = <0>; y-movement = <(-2160)>;
-		};
-		mmv_left: mmv_left {
-			compatible = "zmk,behavior-mouse-move";
-			#binding-cells = <0>;
-			x-movement = <(-3840)>; y-movement = <0>;
-		};
-		mmv_right: mmv_right {
-			compatible = "zmk,behavior-mouse-move";
-			#binding-cells = <0>;
-			x-movement = <3840>; y-movement = <0>;
-		};
-		mmv_bottom: mmv_bottom {
-			compatible = "zmk,behavior-mouse-move";
-			#binding-cells = <0>;
-			x-movement = <0>; y-movement = <2160>;
-		};
 	};
 	
 	keymap {
@@ -146,7 +126,7 @@
 		};
 		window {
 			bindings = <
-				&kp C_VOL_UP	&mmv_left			&mmv_bottom			&mmv_top			&mmv_right			&none	&none	&none	&none	&none
+				&kp C_VOL_UP	&mmv MOVE_X(-2160)	&mmv MOVE_Y(3940)	&mmv MOVE_Y(-3940)	&mmv MOVE_X(2160)	&none	&none	&none	&none	&none
 				&kp C_VOL_UP 	&hkp RC(RGUI) LEFT	&hkp RS(RGUI) LEFT	&hkp RS(RGUI) RIGHT	&hkp RC(RGUI) RIGHT	&none	&none	&none	&none	&none
 				&kp C_MUTE		&hkp WIN LEFT		&hkp WIN UP			&hkp WIN DOWN		&hkp WIN RIGHT		&none	&none	&none	&none	&none
 								&trans				&trans				&trans				&trans				&trans	&trans
