@@ -20,6 +20,7 @@
 
 &lt { flavor = "hold-preferred"; };
 &mt { flavor = "hold-preferred"; quick-tap-ms = <300>; };
+&mmv { max-speed-pps = <5000>; time-to-max-speed-ms = <0>; };
 
 / {
 	behaviors {
