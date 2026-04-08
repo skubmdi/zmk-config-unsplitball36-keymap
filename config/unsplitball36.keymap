@@ -128,7 +128,7 @@
 		window {
 			bindings = <
 				&kp C_VOL_UP	&none				&none				&none				&none				&none	&none	&none	&none	&none
-				&kp C_VOL_UP 	&hkp RC(RGUI) LEFT	&hkp RS(RGUI) LEFT	&hkp RS(RGUI) RIGHT	&hkp RC(RGUI) RIGHT	&none	&none	&none	&none	&none
+				&kp C_VOL_DN 	&hkp RC(RGUI) LEFT	&hkp RS(RGUI) LEFT	&hkp RS(RGUI) RIGHT	&hkp RC(RGUI) RIGHT	&none	&none	&none	&none	&none
 				&kp C_MUTE		&hkp RWIN LEFT		&hkp RWIN UP		&hkp RWIN DOWN		&hkp RWIN RIGHT		&none	&none	&none	&none	&none
 								&trans				&trans				&trans				&trans				&trans	&trans
 			>;
