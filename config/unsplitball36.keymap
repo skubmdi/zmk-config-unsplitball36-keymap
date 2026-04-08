@@ -74,22 +74,22 @@
 		mmv_top: mmv_top {
 			compatible = "zmk,behavior-mouse-move";
 			#binding-cells = <0>;
-			x-inventory = <0>; y-inventory = <(-2160)>;
+			x-movement = <0>; y-movement = <(-2160)>;
 		};
 		mmv_left: mmv_left {
 			compatible = "zmk,behavior-mouse-move";
 			#binding-cells = <0>;
-			x-inventory = <(-3840)>; y-inventory = <0>;
+			x-movement = <(-3840)>; y-movement = <0>;
 		};
 		mmv_right: mmv_right {
 			compatible = "zmk,behavior-mouse-move";
 			#binding-cells = <0>;
-			x-inventory = <3840>; y-inventory = <0>;
+			x-movement = <3840>; y-movement = <0>;
 		};
 		mmv_bottom: mmv_bottom {
 			compatible = "zmk,behavior-mouse-move";
 			#binding-cells = <0>;
-			x-inventory = <0>; y-inventory = <2160>;
+			x-movement = <0>; y-movement = <2160>;
 		};
 	};
 	
