@@ -20,7 +20,7 @@
 
 &lt { flavor = "hold-preferred"; };
 &mt { flavor = "hold-preferred"; quick-tap-ms = <300>; };
-&mmv { max-speed-pps = <5000>; time-to-max-speed-ms = <0>; };
+&sensor_rotation { rotation-angle = <25>; };
 
 / {
 	behaviors {
@@ -127,9 +127,9 @@
 		};
 		window {
 			bindings = <
-				&kp C_VOL_UP	&mmv MOVE_X(-2160)	&mmv MOVE_Y(3940)	&mmv MOVE_Y(-3940)	&mmv MOVE_X(2160)	&none	&none	&none	&none	&none
+				&kp C_VOL_UP	&none				&none				&none				&none				&none	&none	&none	&none	&none
 				&kp C_VOL_UP 	&hkp RC(RGUI) LEFT	&hkp RS(RGUI) LEFT	&hkp RS(RGUI) RIGHT	&hkp RC(RGUI) RIGHT	&none	&none	&none	&none	&none
-				&kp C_MUTE		&hkp WIN LEFT		&hkp WIN UP			&hkp WIN DOWN		&hkp WIN RIGHT		&none	&none	&none	&none	&none
+				&kp C_MUTE		&hkp RWIN LEFT		&hkp RWIN UP		&hkp RWIN DOWN		&hkp RWIN RIGHT		&none	&none	&none	&none	&none
 								&trans				&trans				&trans				&trans				&trans	&trans
 			>;
 		};
@@ -143,7 +143,7 @@
 		compatible = "zmk,combos";
 		
 		// ctrl
-		// ctrl		{ slow-release; timeout-ms = <35>; key-positions = <20, 21>; bindings = <&mo CTRL> };
+		// { slow-release; timeout-ms = <35>; key-positions = <20, 21>; bindings = <&mo CTRL> };
 
 		// bootloader
 		bootloader	{ slow-release; timeout-ms = <35>; key-positions = <0 10 20>; bindings = <&bootloader>; };
@@ -182,10 +182,6 @@
 		hrm_lsht_lalt	{ slow-release; timeout-ms = <35>; key-positions = <11 12 13>; bindings = <&kp LS(LALT)>; };
 		hrm_lmeh		{ slow-release; timeout-ms = <35>; key-positions = <10 11 12 13>; bindings = <&kp LC(LS(LALT))>; };
 	};
-};
-
-&sensor_rotation {
-	rotation-angle = <25>;
 };
 
 / {
