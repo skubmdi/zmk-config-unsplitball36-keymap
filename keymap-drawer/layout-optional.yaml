@@ -30,7 +30,7 @@ layers:
   - W
   - V
   - Z
-  - 'Base Layer'
+  - {t: 'Base Layer', type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -67,7 +67,7 @@ layers:
   - ','
   - .
   - /
-  - 'Base Layer'
+  - {t: 'Base Layer', type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -104,7 +104,7 @@ layers:
   - J
   - L
   - /
-  - 'Base Layer'
+  - {t: 'Base Layer', type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

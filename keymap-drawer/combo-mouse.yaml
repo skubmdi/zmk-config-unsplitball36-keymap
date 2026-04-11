@@ -46,8 +46,8 @@ combos:
   - p: [26, 27, 28]
     k: 'Click Triple'
   - p: [26, 27]
-    k: 'Click Button4'
+    k: 'Click Back'
   - p: [27, 28]
-    k: 'Click Button5'
+    k: 'Click Forwad'
   - p: [16, 18]
     k: 'Click Wheel'

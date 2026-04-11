@@ -12,13 +12,14 @@
 #define EUCALYN	3
 #define FUNC	4
 #define NUMB	5
-#define CTRL	6
+#define WIN		6
 
 #define NONE &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none \
              &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none
 
 &lt { flavor = "hold-preferred"; };
 &mt { flavor = "hold-preferred"; quick-tap-ms = <300>; };
+&sensor_rotation { rotation-angle = <25>; };
 
 / {
 	behaviors {
@@ -69,7 +70,7 @@
 				&kp Q	&kp W		&kp E			&kp R			&kp T			&kp Y			&kp U	&kp I		&kp O		&kp P
 				&kp A	&kp S		&kp D			&kp F			&kp G			&kp H			&kp J	&kp K		&kp L		&kp SEMI
 				&kp Z	&kp X		&kp C			&kp V			&kp B			&kp N			&kp M	&kp COMMA	&kp DOT		&kp SLASH
-						&base_layer	&lt NUMB ESC	&lt FUNC SPACE	&lt CTRL TAB	&lt NUMB INT2	&lt FUNC ENTER
+						&base_layer	&lt NUMB GRAVE	&lt FUNC SPACE	&lt WIN TAB	&lt NUMB INT2	&lt FUNC ENTER
 			>;
 		};
 		dvorak {
@@ -98,26 +99,26 @@
 		};
 		function {
 			bindings = <
-				&kp GRAVE	&kp F2		&kp F3			&kp F4		&kp F5		&kp MINUS	&kp EQUAL	&kp INT3	&mt RGUI INS	&mt RCTRL DEL
+				&kp ESC		&kp F2		&kp F3			&kp F4		&kp F5		&kp MINUS	&kp EQUAL	&kp INT3	&mt RGUI INS	&mt RCTRL DEL
 				&kp F6		&kp F7		&kp F8			&kp F9		&kp F10		&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT		&mt RSHFT BSPC
 				&kp PSCRN	&kp SLCK	&kp PAUSE_BREAK	&kp F11		&kp F12		&kp HOME	&kp PG_DN	&kp PG_UP	&kp END			&mt RALT K_APP
-							&trans		&trans			&trans		&trans		&trans		&trans
+							&trans		&trans			&kp SPACE	&trans		&trans		&kp ENTER
 			>;
 		};
 		number {
 			bindings = <
-				&kp N1			&kp N2				&kp N3			&kp N4			&kp N5			&hkp LSHFT N1	&hkp LSHFT N2	&hkp LSHFT N3	&hkp LSHFT N4	&hkp LSHFT N5
-				&kp N6			&kp N7				&kp N8			&kp N9			&kp N0			&hkp LSHFT N6	&hkp LSHFT N7	&hkp LSHFT N8	&hkp LSHFT N9	&kp SQT
-				&kp KP_SLASH	&kp KP_ASTERISK		&kp KP_MINUS	&kp KP_PLUS		&kp KP_DOT		&hkp LSHFT N0	&kp LBKT		&kp RBKT		&kp NUHS		&kp INT1
-								&trans				&trans			&trans			&trans			&trans			&trans
+				&kp N1			&kp N2				&kp N3			&kp N4			&kp N5			&kp N1		&kp N2		&kp N3		&kp N4		&mt RCTRL N5
+				&kp N6			&kp N7				&kp N8			&kp N9			&kp N0			&kp N6		&kp N7		&kp N8		&kp N9		&mt RSHFT SQT
+				&kp KP_SLASH	&kp KP_ASTERISK		&kp KP_MINUS	&kp KP_PLUS		&kp KP_DOT		&kp N0		&kp LBKT	&kp RBKT	&kp NUHS	&mt RALT INT1
+								&trans				&trans			&kp SPACE		&trans			&trans		&kp ENTER
 			>;
 		};
-		control {
+		window {
 			bindings = <
-				&kp C_VOL_UP	&hkp RC(RGUI) F4	&hkp RS(RGUI) UP	&hkp RGUI UP		&hkp RC(RGUI) D			&none	&none	&none	&none	&none
-				&kp C_VOL_DN	&hkp RC(RGUI) LEFT	&hkp RS(RGUI) LEFT	&hkp RS(RGUI) RIGHT	&hkp RC(RGUI) RIGHT		&none	&none	&none	&none	&none
-				&kp C_MUTE		&hkp RGUI LEFT		&hkp RS(RGUI) DOWN	&hkp RGUI DOWN		&hkp RGUI RIGHT			&none	&none	&none	&none	&none
-								&trans				&trans				&trans					&trans				&trans	&trans
+				&kp C_VOL_UP	&none				&none				&none				&none				&none	&none	&none	&none	&none
+				&kp C_VOL_DN 	&hkp RC(RGUI) LEFT	&hkp RS(RGUI) LEFT	&hkp RS(RGUI) RIGHT	&hkp RC(RGUI) RIGHT	&none	&none	&none	&none	&none
+				&kp C_MUTE		&hkp RWIN LEFT		&hkp RWIN UP		&hkp RWIN DOWN		&hkp RWIN RIGHT		&none	&none	&none	&none	&none
+								&trans				&trans				&trans				&trans				&trans	&trans
 			>;
 		};
 	};
@@ -163,10 +164,6 @@
 		hrm_lsht_lalt	{ slow-release; timeout-ms = <35>; key-positions = <11 12 13>; bindings = <&kp LS(LALT)>; };
 		hrm_lmeh		{ slow-release; timeout-ms = <35>; key-positions = <10 11 12 13>; bindings = <&kp LC(LS(LALT))>; };
 	};
-};
-
-&sensor_rotation {
-	rotation-angle = <25>;
 };
 
 / {

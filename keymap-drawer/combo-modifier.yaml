@@ -45,12 +45,12 @@ combos:
     k: Alt
   - p: [12, 14]
     k: Win
-  - p: [10, 13]
+  - p: [10, 11, 12]
     k: Ctrl Shift
   - p: [11, 12, 13]
-    k: Ctrl Alt
-  - p: [10, 11, 12]
     k: Shift Alt
+  - p: [10, 13]
+    k: Ctrl Alt
   - p: [10, 14]
     k: Win Ctrl
   - p: [11, 14]
