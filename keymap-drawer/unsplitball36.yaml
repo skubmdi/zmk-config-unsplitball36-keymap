@@ -31,12 +31,12 @@ layers:
   - ','
   - .
   - /
-  - '&base_layer'
-  - {t: '`', h: number}
-  - {t: SPACE, h: function}
-  - {t: TAB, h: window}
-  - {t: INT2, h: number}
-  - {t: ENTER, h: function}
+  - BASE
+  - {t: 半/全, h: number}
+  - {t: ␣, h: function}
+  - {t: ↹, h: window}
+  - {t: あ/ア, h: number}
+  - {t: ⏎, h: function}
   dvorak:
   - /
   - ','
@@ -68,7 +68,7 @@ layers:
   - W
   - V
   - Z
-  - '&base_layer'
+  - BASE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -105,7 +105,7 @@ layers:
   - ','
   - .
   - /
-  - '&base_layer'
+  - BASE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -142,7 +142,7 @@ layers:
   - J
   - L
   - /
-  - '&base_layer'
+  - BASE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -155,36 +155,36 @@ layers:
   - F4
   - F5
   - '-'
-  - '='
-  - INT3
+  - ^
+  - \
   - {t: INS, h: RGUI}
-  - {t: DEL, h: RCTRL}
+  - {t: ⌦, h: RCTRL}
   - F6
   - F7
   - F8
   - F9
   - F10
-  - LEFT
-  - DOWN
-  - UP
-  - RIGHT
-  - {t: BSPC, h: RSHFT}
-  - PSCRN
-  - SLCK
-  - PAUSE BREAK
+  - ←
+  - ↓
+  - ↑
+  - →
+  - {t: ⌫, h: RSHFT}
+  - ⎙
+  - ⇳
+  - ⎉
   - F11
   - F12
-  - HOME
-  - PG DN
-  - PG UP
-  - END
+  - ↖
+  - ⤒
+  - ⤓
+  - ↘
   - {t: APP, h: RALT}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: SPACE, type: held}
+  - {t: ␣, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ENTER
+  - ⏎
   number:
   - '1'
   - '2'
@@ -205,23 +205,23 @@ layers:
   - '7'
   - '8'
   - '9'
-  - {t: '''', h: RSHFT}
+  - {t: SQT, h: RSHFT}
   - KP SLASH
   - KP ASTERISK
   - KP MINUS
   - KP PLUS
   - KP DOT
   - '0'
-  - '['
-  - ']'
-  - '#'
+  - LBKT
+  - RBKT
+  - NUHS
   - {t: INT1, h: RALT}
   - {t: ▽, type: trans}
   - {type: held}
-  - SPACE
+  - ␣
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ENTER
+  - ⏎
   window:
   - VOL UP
   - ''
@@ -261,37 +261,21 @@ layers:
   - {t: ▽, type: trans}
 combos:
 - p: [0, 10, 20]
-  k: '&bootloader'
-- p: [5, 15]
-  k: {t: BT, h: '0'}
-- p: [6, 16]
-  k: {t: BT, h: '1'}
-- p: [7, 17]
-  k: {t: BT, h: '2'}
-- p: [8, 18]
-  k: {t: BT, h: '3'}
-- p: [9, 19]
-  k: {t: BT, h: '4'}
-- p: [9, 19, 29]
-  k: BT CLR
+  k: BOOT
 - p: [5, 15, 25]
   k: OUT TOG
-- p: [13, 16]
-  k: '&home'
-- p: [16, 17]
-  k: '&mkp MB1'
-- p: [17, 18]
-  k: '&mkp MB2'
-- p: [16, 18]
-  k: '&mkp MB3'
-- p: [26, 27]
-  k: '&mkp MB4'
-- p: [27, 28]
-  k: '&mkp MB5'
-- p: [16, 17, 18]
-  k: '&mkp_2mb1'
-- p: [26, 27, 28]
-  k: '&mkp_3mb1'
+- p: [5, 15]
+  k: BT0 SELECT
+- p: [6, 16]
+  k: BT1 SELECT
+- p: [7, 17]
+  k: BT2 SELECT
+- p: [8, 18]
+  k: BT3 SELECT
+- p: [9, 19]
+  k: BT4 SELECT
+- p: [9, 19, 29]
+  k: BT CLR
 - p: [10, 11]
   k: LCTRL
 - p: [11, 12]
@@ -300,17 +284,33 @@ combos:
   k: LALT
 - p: [12, 14]
   k: LGUI
-- p: [10, 14]
-  k: Gui+LCTRL
-- p: [11, 14]
-  k: Gui+LSHFT
-- p: [13, 14]
-  k: Gui+LALT
 - p: [10, 13]
-  k: Ctl+LALT
+  k: Ctrl LALT
 - p: [10, 11, 12]
-  k: Ctl+LSHFT
+  k: Ctrl LSHFT
+- p: [10, 14]
+  k: Win LCTRL
+- p: [11, 14]
+  k: Win LSHFT
+- p: [13, 14]
+  k: Win LALT
 - p: [11, 12, 13]
-  k: Sft+LALT
+  k: Shift LALT
 - p: [10, 11, 12, 13]
-  k: Ctl+Sft+LALT
+  k: Ctrl Shift LALT
+- p: [13, 16]
+  k: asdf;lkj
+- p: [16, 17]
+  k: Mouse Button1
+- p: [17, 18]
+  k: Mouse Button2
+- p: [16, 18]
+  k: Mouse Button3
+- p: [26, 27]
+  k: Mouse Button4
+- p: [27, 28]
+  k: Mouse Button5
+- p: [16, 17, 18]
+  k: Double Click
+- p: [26, 27, 28]
+  k: Triple Click
