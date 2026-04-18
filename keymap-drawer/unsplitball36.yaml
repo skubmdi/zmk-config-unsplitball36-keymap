@@ -20,7 +20,7 @@ layers:
   - J
   - K
   - L
-  - ;
+  - ;+
   - Z
   - X
   - C
@@ -28,9 +28,9 @@ layers:
   - B
   - N
   - M
-  - ','
-  - .
-  - /
+  - ',<'
+  - .>
+  - /?
   - BASE
   - {t: 半/全, h: number}
   - {t: ␣, h: function}
@@ -38,9 +38,9 @@ layers:
   - {t: あ/ア, h: number}
   - {t: ⏎, h: function}
   dvorak:
-  - /
-  - ','
-  - .
+  - /?
+  - ',<'
+  - .>
   - P
   - Y
   - F
@@ -58,7 +58,7 @@ layers:
   - T
   - N
   - S
-  - ;
+  - ;+
   - Q
   - J
   - K
@@ -84,7 +84,7 @@ layers:
   - L
   - U
   - Y
-  - ;
+  - ;+
   - A
   - R
   - S
@@ -102,9 +102,9 @@ layers:
   - B
   - K
   - M
-  - ','
-  - .
-  - /
+  - ',<'
+  - .>
+  - /?
   - BASE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -114,9 +114,9 @@ layers:
   eucalyn:
   - Q
   - W
-  - ','
-  - .
-  - ;
+  - ',<'
+  - .>
+  - ;+
   - M
   - R
   - D
@@ -141,7 +141,7 @@ layers:
   - H
   - J
   - L
-  - /
+  - /?
   - BASE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -154,10 +154,10 @@ layers:
   - F3
   - F4
   - F5
-  - '-'
-  - ^
-  - \
-  - {t: INS, h: RGUI}
+  - -=
+  - ^~
+  - \|
+  - {t: Ins, h: RGUI}
   - {t: ⌦, h: RCTRL}
   - F6
   - F7
@@ -178,49 +178,49 @@ layers:
   - ⤒
   - ⤓
   - ↘
-  - {t: APP, h: RALT}
+  - {t: ≣, h: RALT}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ␣, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ⏎
+  - {t: ⏎, type: held alternate}
   number:
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - {t: '5', h: RCTRL}
-  - '6'
-  - '7'
-  - '8'
-  - '9'
+  - 1!
+  - 2"
+  - 3#
+  - 4$
+  - 5%
+  - 1!
+  - 2"
+  - 3#
+  - 4$
+  - {t: 5%, h: RCTRL}
+  - 6&
+  - 7'
+  - 8(
+  - 9)
   - '0'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - {t: SQT, h: RSHFT}
-  - KP SLASH
-  - KP ASTERISK
-  - KP MINUS
-  - KP PLUS
-  - KP DOT
+  - 6&
+  - 7'
+  - 8(
+  - 9)
+  - {t: ':*', h: RSHFT}
+  - (/)
+  - (*)
+  - (-)
+  - (+)
+  - (.)
   - '0'
-  - LBKT
-  - RBKT
-  - NUHS
-  - {t: INT1, h: RALT}
+  - '@`'
+  - '[{'
+  - ']}'
+  - {t: \_, h: RALT}
   - {t: ▽, type: trans}
   - {type: held}
   - ␣
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held alternate}
   - ⏎
   window:
   - VOL UP
@@ -262,8 +262,6 @@ layers:
 combos:
 - p: [0, 10, 20]
   k: BOOT
-- p: [5, 15, 25]
-  k: OUT TOG
 - p: [5, 15]
   k: BT0 SELECT
 - p: [6, 16]
@@ -276,28 +274,8 @@ combos:
   k: BT4 SELECT
 - p: [9, 19, 29]
   k: BT CLR
-- p: [10, 11]
-  k: LCTRL
-- p: [11, 12]
-  k: LSHFT
-- p: [12, 13]
-  k: LALT
-- p: [12, 14]
-  k: LGUI
-- p: [10, 13]
-  k: Ctrl LALT
-- p: [10, 11, 12]
-  k: Ctrl LSHFT
-- p: [10, 14]
-  k: Win LCTRL
-- p: [11, 14]
-  k: Win LSHFT
-- p: [13, 14]
-  k: Win LALT
-- p: [11, 12, 13]
-  k: Shift LALT
-- p: [10, 11, 12, 13]
-  k: Ctrl Shift LALT
+- p: [5, 15, 25]
+  k: OUT TOG
 - p: [13, 16]
   k: asdf;lkj
 - p: [16, 17]
@@ -314,3 +292,25 @@ combos:
   k: Double Click
 - p: [26, 27, 28]
   k: Triple Click
+- p: [10, 11]
+  k: LCTRL
+- p: [11, 12]
+  k: LSHFT
+- p: [12, 13]
+  k: LALT
+- p: [12, 14]
+  k: LGUI
+- p: [10, 14]
+  k: Win LCTRL
+- p: [11, 14]
+  k: Win LSHFT
+- p: [13, 14]
+  k: Win LALT
+- p: [10, 13]
+  k: Ctrl LALT
+- p: [10, 11, 12]
+  k: Ctrl LSHFT
+- p: [11, 12, 13]
+  k: Shift LALT
+- p: [10, 11, 12, 13]
+  k: Ctrl+Shift LALT
