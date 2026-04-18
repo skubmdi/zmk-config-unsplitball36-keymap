@@ -1,69 +1,25 @@
 draw_config:
-  key_w: 60
-  key_h: 56
-  split_gap: 30.0
-  combo_w: 28
-  combo_h: 26
-  key_rx: 6.0
-  key_ry: 6.0
-  dark_mode: auto
-  n_columns: 1
+  dark_mode: true
   separate_combo_diagrams: true
-  combo_diagrams_scale: 2
-  inner_pad_w: 2.0
-  inner_pad_h: 2.0
-  outer_pad_w: 30.0
-  outer_pad_h: 56.0
-  line_spacing: 1.2
-  arc_radius: 6.0
-  append_colon_to_layer_header: true
-  small_pad: 2.0
-  legend_rel_x: 0.0
-  legend_rel_y: 0.0
-  draw_key_sides: false
-  key_side_pars:
-    rel_x: 0.0
-    rel_y: 4.0
-    rel_w: 12.0
-    rel_h: 12.0
-    rx: 4.0
-    ry: 4.0
-  svg_extra_style: ''
-  footer_text: Created with <a href="https://github.com/caksoylar/keymap-drawer">keymap-drawer</a>
-  shrink_wide_legends: 7
-  style_layer_activators: true
-  glyph_tap_size: 14
-  glyph_hold_size: 12
-  glyph_shifted_size: 10
-  glyphs: {}
+  append_colon_to_layer_header: false
 parse_config:
-  preprocess: true
-  skip_binding_parsing: false
-  raw_binding_map: {
-    "&base_layer": "BASE",
-    "&bootloader": "BOOT",
-    "&home": "asdf;lkj",
-    "&mkp MB1": "Mouse Button1",
-    "&mkp MB2": "Mouse Button2",
-    "&mkp MB3": "Mouse Button3",
-    "&mkp MB4": "Mouse Button4",
-    "&mkp MB5": "Mouse Button5",
-    "&mkp_2mb1": "Double Click",
-    "&mkp_3mb1": "Triple Click",
-    "&bt BT_SEL 0": "BT0 SELECT",
-    "&bt BT_SEL 1": "BT1 SELECT",
-    "&bt BT_SEL 2": "BT2 SELECT",
-    "&bt BT_SEL 3": "BT3 SELECT",
-    "&bt BT_SEL 4": "BT4 SELECT",
-  }
-  sticky_label: sticky
-  toggle_label: toggle
-  tap_toggle_label: tap-toggle
-  trans_legend:
-    t: ▽
-    type: trans
-  layer_legend_map: {}
-  mark_alternate_layer_activators: false
+  raw_binding_map:
+    "&base_layer": "BASE"
+    "&bootloader": "BOOT"
+    "&home": "asdf;lkj"
+    "&mkp MB1": "Mouse Button1"
+    "&mkp MB2": "Mouse Button2"
+    "&mkp MB3": "Mouse Button3"
+    "&mkp MB4": "Mouse Button4"
+    "&mkp MB5": "Mouse Button5"
+    "&mkp_2mb1": "Double Click"
+    "&mkp_3mb1": "Triple Click"
+    "&bt BT_SEL 0": "BT0 SELECT"
+    "&bt BT_SEL 1": "BT1 SELECT"
+    "&bt BT_SEL 2": "BT2 SELECT"
+    "&bt BT_SEL 3": "BT3 SELECT"
+    "&bt BT_SEL 4": "BT4 SELECT"
+  mark_alternate_layer_activators: true
   modifier_fn_map:
     left_ctrl: Ctrl
     right_ctrl: Ctrl
@@ -74,24 +30,19 @@ parse_config:
     left_gui: Win
     right_gui: Win
     keycode_combiner: '{mods} {key}'
-    mod_combiner: '{mod_1} {mod_2}'
-    special_combinations:
-      left_ctrl+left_alt+left_gui+left_shift: Hyper
-      left_ctrl+left_alt+left_shift: Meh
-  zmk_remove_keycode_prefix: []
   zmk_keycode_map:
-    SEMI: ';'
-    COMMA: ','
-    DOT: '.'
-    SLASH: '/'
+    SEMI: ';+'
+    COMMA: ',<'
+    DOT: '.>'
+    SLASH: '/?'
     GRAVE: '半/全'
     SPACE: '␣'
     TAB: '↹'
     ENTER: '⏎'
     INT2: 'あ/ア'
-    MINUS: '-'
-    EQUAL: '^'
-    INT3: '\'
+    MINUS: '-='
+    EQUAL: '^~'
+    INT3: '\|'
     LEFT: '←'
     DOWN: '↓'
     UP: '↑'
@@ -103,9 +54,26 @@ parse_config:
     PSCRN: '⎙'
     SLCK: '⇳'
     PAUSE_BREAK: '⎉'
+    INS: 'Ins'
     BSPC: '⌫'
     DEL: '⌦'
-    APP: '▤'
-  zmk_combos: {}
-  zmk_preamble: '#define KEYMAP_DRAWER'
-  zmk_additional_includes: []
+    K_APP: '≣'
+    N1: '1!'
+    N2: '2"'
+    N3: '3#'
+    N4: '4$'
+    N5: '5%'
+    N6: '6&'
+    N7: '7'''
+    N8: '8('
+    N9: '9)'
+    KP_SLASH: '(/)'
+    KP_ASTERISK: '(*)'
+    KP_MINUS: '(-)'
+    KP_PLUS: '(+)'
+    KP_DOT: '(.)'
+    SQT: ':*'
+    LBKT: '@`'
+    RBKT: '[{'
+    NUHS: ']}'
+    INT1: '\_'
