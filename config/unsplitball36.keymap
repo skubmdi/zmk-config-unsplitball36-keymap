@@ -127,22 +127,33 @@
 		
 		compatible = "zmk,combos";
 		
-		// bootloader
 		bootloader	{ slow-release; timeout-ms = <35>; key-positions = <0 10 20>; bindings = <&bootloader>; };
+		out_tog		{ slow-release; timeout-ms = <35>; key-positions = <5 15 25>; bindings = <&out OUT_TOG>; };
 		
-		// bt
 		bt_sel_0	{ slow-release; timeout-ms = <35>; key-positions = < 5 15>; bindings = <&bt BT_SEL 0>; };
 		bt_sel_1	{ slow-release; timeout-ms = <35>; key-positions = < 6 16>; bindings = <&bt BT_SEL 1>; };
 		bt_sel_2	{ slow-release; timeout-ms = <35>; key-positions = < 7 17>; bindings = <&bt BT_SEL 2>; };
 		bt_sel_3	{ slow-release; timeout-ms = <35>; key-positions = < 8 18>; bindings = <&bt BT_SEL 3>; };
 		bt_sel_4	{ slow-release; timeout-ms = <35>; key-positions = < 9 19>; bindings = <&bt BT_SEL 4>; };
 		bt_clr		{ slow-release; timeout-ms = <35>; key-positions = <9 19 29>; bindings = <&bt BT_CLR>; };
-		out_tog		{ slow-release; timeout-ms = <35>; key-positions = <5 15 25>; bindings = <&out OUT_TOG>; };
 		
-		// macro
+		hrm_lctl		{ slow-release; timeout-ms = <35>; key-positions = <10 11>; bindings = <&kp LCTRL>; };
+		hrm_lsht		{ slow-release; timeout-ms = <35>; key-positions = <11 12>; bindings = <&kp LSHFT>; };
+
+		hrm_lalt		{ slow-release; timeout-ms = <35>; key-positions = <12 13>; bindings = <&kp LALT>; };
+		hrm_lgui		{ slow-release; timeout-ms = <35>; key-positions = <12 14>; bindings = <&kp LGUI>; };
+
+		hrm_lctl_lalt	{ slow-release; timeout-ms = <35>; key-positions = <10 13>; bindings = <&kp LC(LALT)>; };
+		hrm_lctl_lsht	{ slow-release; timeout-ms = <35>; key-positions = <10 11 12>; bindings = <&kp LC(LSHFT)>; };
+
+		hrm_lgui_lctl	{ slow-release; timeout-ms = <35>; key-positions = <10 14>; bindings = <&kp LG(LCTRL)>; };
+		hrm_lgui_lsht	{ slow-release; timeout-ms = <35>; key-positions = <11 14>; bindings = <&kp LG(LSHFT)>; };
+		hrm_lgui_lalt	{ slow-release; timeout-ms = <35>; key-positions = <13 14>; bindings = <&kp LG(LALT)>; };
+		hrm_lsht_lalt	{ slow-release; timeout-ms = <35>; key-positions = <11 12 13>; bindings = <&kp LS(LALT)>; };
+
+		hrm_lmeh		{ slow-release; timeout-ms = <35>; key-positions = <10 11 12 13>; bindings = <&kp LC(LS(LALT))>; };
 		home	{ slow-release; timeout-ms = <35>; key-positions = <13 16>; bindings = <&home>; };
 		
-		// mouse button
 		single_mb1	{ slow-release; timeout-ms = <35>; key-positions = <16 17>; bindings = <&mkp MB1>; };
 		single_mb2	{ slow-release; timeout-ms = <35>; key-positions = <17 18>; bindings = <&mkp MB2>; };
 		single_mb3	{ slow-release; timeout-ms = <35>; key-positions = <16 18>; bindings = <&mkp MB3>; };
@@ -150,19 +161,6 @@
 		single_mb5	{ slow-release; timeout-ms = <35>; key-positions = <27 28>; bindings = <&mkp MB5>; };
 		double_mb1	{ slow-release; timeout-ms = <35>; key-positions = <16 17 18>; bindings = <&mkp_2mb1>; };
 		triple_mb1	{ slow-release; timeout-ms = <35>; key-positions = <26 27 28>; bindings = <&mkp_3mb1>; };
-		
-		// home row mods
-		hrm_lctl		{ slow-release; timeout-ms = <35>; key-positions = <10 11>; bindings = <&kp LCTRL>; };
-		hrm_lsht		{ slow-release; timeout-ms = <35>; key-positions = <11 12>; bindings = <&kp LSHFT>; };
-		hrm_lalt		{ slow-release; timeout-ms = <35>; key-positions = <12 13>; bindings = <&kp LALT>; };
-		hrm_lgui		{ slow-release; timeout-ms = <35>; key-positions = <12 14>; bindings = <&kp LGUI>; };
-		hrm_lgui_lctl	{ slow-release; timeout-ms = <35>; key-positions = <10 14>; bindings = <&kp LG(LCTRL)>; };
-		hrm_lgui_lsht	{ slow-release; timeout-ms = <35>; key-positions = <11 14>; bindings = <&kp LG(LSHFT)>; };
-		hrm_lgui_lalt	{ slow-release; timeout-ms = <35>; key-positions = <13 14>; bindings = <&kp LG(LALT)>; };
-		hrm_lctl_lalt	{ slow-release; timeout-ms = <35>; key-positions = <10 13>; bindings = <&kp LC(LALT)>; };
-		hrm_lctl_lsht	{ slow-release; timeout-ms = <35>; key-positions = <10 11 12>; bindings = <&kp LC(LSHFT)>; };
-		hrm_lsht_lalt	{ slow-release; timeout-ms = <35>; key-positions = <11 12 13>; bindings = <&kp LS(LALT)>; };
-		hrm_lmeh		{ slow-release; timeout-ms = <35>; key-positions = <10 11 12 13>; bindings = <&kp LC(LS(LALT))>; };
 	};
 };
 
