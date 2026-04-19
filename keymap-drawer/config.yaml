@@ -1,20 +1,20 @@
 draw_config:
-  dark_mode: true
+  dark_mode: auto
   separate_combo_diagrams: true
   append_colon_to_layer_header: false
 parse_config:
   mark_alternate_layer_activators: true
   modifier_fn_map:
-    left_ctrl: Ctrl
-    right_ctrl: Ctrl
-    left_shift: Shift
-    right_shift: Shift
-    left_alt: Alt
-    right_alt: Alt
-    left_gui: Win
-    right_gui: Win
-    mod_combiner: "{mod_1} {mod_2}"
-    keycode_combiner: "{mods} {key}"
+    left_ctrl: "^"
+    right_ctrl: "^"
+    left_shift: "⇧"
+    right_shift: "⇧"
+    left_alt: "⌥"
+    right_alt: "⌥"
+    left_gui: "⌘"
+    right_gui: "⌘"
+    mod_combiner: "{mod_1}{mod_2}"
+    keycode_combiner: "{mods}{key}"
   raw_binding_map:
     "&bootloader": "boot"
     "&base_layer": "base"
@@ -33,14 +33,14 @@ parse_config:
     "&bt BT_SEL 4": "ᛒ5"
     "&bt BT_CLR": "ᛒx"
     "&out OUT_TOG": "ᛒ/ψ"
-    "&hkp RWIN UP": "Win ↑"
-    "&hkp RWIN DOWN": "Win ↓"
-    "&hkp RWIN LEFT": "Win ←"
-    "&hkp RWIN RIGHT": "Win →"
-    "&hkp RC(RGUI) LEFT": "Ctrl Win ←"
-    "&hkp RS(RGUI) LEFT": "Shift Win ←"
-    "&hkp RC(RGUI) RIGHT": "Ctrl Win →"
-    "&hkp RS(RGUI) RIGHT": "Shift Win →"
+    "&hkp RWIN UP": "↑ ⌘"
+    "&hkp RWIN DOWN": "⌘ ↓"
+    "&hkp RWIN LEFT": "←⌘"
+    "&hkp RWIN RIGHT": "⌘→"
+    "&hkp RS(RGUI) LEFT": "←⌘⇧"
+    "&hkp RC(RGUI) LEFT": "←⌘^"
+    "&hkp RC(RGUI) RIGHT": "⌃⌘→"
+    "&hkp RS(RGUI) RIGHT": "⇧⌘→"
   zmk_keycode_map:
     SEMI: ";+"
     COMMA: ",<"
@@ -50,6 +50,7 @@ parse_config:
     SPACE: "␣"
     TAB: "↹"
     ENTER: "⏎"
+    ESC: "⎋"
     INT2: "あ/ア"
     MINUS: "-="
     EQUAL: "^~"
@@ -91,11 +92,11 @@ parse_config:
     C_VOL_UP: "🔊"
     C_VOL_DN: "🔉"
     C_MUTE: "🔇"
-    LCTRL: "Ctrl"
-    LSHFT: "Shift"
-    LALT: "Alt"
-    LGUI: "Win"
-    RCTRL: "Ctrl"
-    RSHFT: "Shift"
-    RALT: "Alt"
-    RGUI: "Win"
+    LCTRL: "⌃"
+    LSHFT: "⇧"
+    LALT: "⌥"
+    LGUI: "⌘"
+    RCTRL: "⌃"
+    RSHFT: "⇧"
+    RALT: "⌥"
+    RGUI: "⌘"
