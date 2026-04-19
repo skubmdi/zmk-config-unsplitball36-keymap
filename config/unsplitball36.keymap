@@ -17,7 +17,7 @@
 #define NONE &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none \
              &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none
 
-#define COMBO(NAME, TM, KP, B) NAME { slow-release; timeout-ms = <TM>; key-positions = KP; bindings = B; };
+#define COMBO(NAME, TM, KP, B) NAME { slow-release; timeout-ms = <TM>; key-positions = KP; bindings = B; }
 
 &lt { flavor = "hold-preferred"; };
 &mt { flavor = "hold-preferred"; quick-tap-ms = <300>; };

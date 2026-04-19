@@ -5,7 +5,7 @@ draw_config:
 parse_config:
   raw_binding_map:
     "&bootloader": "Bootloader"
-    "&base_layer": "Toggle Base Layer"
+    "&base_layer": "Base"
     "&home": "asdf;lkj"
     "&mkp MB1": "Mouse Left"
     "&mkp MB2": "Mouse Right"
@@ -14,11 +14,11 @@ parse_config:
     "&mkp MB5": "Mouse Forward"
     "&mkp_2mb1": "Double Click"
     "&mkp_3mb1": "Triple Click"
-    "&bt BT_SEL 0": "Slot0 Select"
-    "&bt BT_SEL 1": "Slot1 Select"
-    "&bt BT_SEL 2": "Slot2 Select"
-    "&bt BT_SEL 3": "Slot3 Select"
-    "&bt BT_SEL 4": "Slot4 Select"
+    "&bt BT_SEL 0": "ᛒ1"
+    "&bt BT_SEL 1": "ᛒ2"
+    "&bt BT_SEL 2": "ᛒ3"
+    "&bt BT_SEL 3": "ᛒ4"
+    "&bt BT_SEL 4": "ᛒ5"
   mark_alternate_layer_activators: true
   modifier_fn_map:
     left_ctrl: Ctrl
