@@ -149,7 +149,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   function:
-  - ESC
+  - ⎋
   - F2
   - F3
   - F4
@@ -157,8 +157,8 @@ layers:
   - -=
   - ^~
   - \|
-  - {t: ⭿, h: Win}
-  - {t: ⌦, h: Ctrl}
+  - {t: ⭿, h: ⌘}
+  - {t: ⌦, h: ⌃}
   - F6
   - F7
   - F8
@@ -168,7 +168,7 @@ layers:
   - ↓
   - ↑
   - →
-  - {t: ⌫, h: Shift}
+  - {t: ⌫, h: ⇧}
   - ⎙
   - ⇳
   - ⎉
@@ -178,7 +178,7 @@ layers:
   - ⤒
   - ⤓
   - ↘
-  - {t: ≣, h: Alt}
+  - {t: ≣, h: ⌥}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ␣, type: held}
@@ -194,8 +194,8 @@ layers:
   - 1!
   - 2"
   - 3#
-  - {t: 4$, h: Win}
-  - {t: 5%, h: Ctrl}
+  - {t: 4$, h: ⌘}
+  - {t: 5%, h: ⌃}
   - 6&
   - 7'
   - 8(
@@ -205,7 +205,7 @@ layers:
   - 7'
   - 8(
   - 9)
-  - {t: ':*', h: Shift}
+  - {t: ':*', h: ⇧}
   - (/)
   - (*)
   - (-)
@@ -215,7 +215,7 @@ layers:
   - '@`'
   - '[{'
   - ']}'
-  - {t: \_, h: Alt}
+  - {t: \_, h: ⌥}
   - {t: ▽, type: trans}
   - {type: held}
   - ␣
@@ -234,20 +234,20 @@ layers:
   - ''
   - ''
   - 🔊
-  - Ctrl Win ←
-  - Shift Win ←
-  - Shift Win →
-  - Ctrl Win →
+  - ←⌘^
+  - ←⌘⇧
+  - ⇧⌘→
+  - ⌃⌘→
   - ''
   - ''
   - ''
   - ''
   - ''
   - 🔉
-  - Win ←
-  - Win ↑
-  - Win ↓
-  - Win →
+  - ←⌘
+  - ↑ ⌘
+  - ⌘ ↓
+  - ⌘→
   - ''
   - ''
   - ''
@@ -277,32 +277,32 @@ combos:
 - p: [10, 20]
   k: 🔇
 - p: [10, 11]
-  k: Ctrl
+  k: ⌃
 - p: [11, 12]
-  k: Shift
+  k: ⇧
 - p: [12, 13]
-  k: Alt
+  k: ⌥
 - p: [12, 14]
-  k: Win
+  k: ⌘
 - p: [10, 11, 12]
-  k: Ctrl Shift
+  k: ^⇧
 - p: [11, 12, 13]
-  k: Shift Alt
-- p: [10, 14]
-  k: Win Ctrl
-- p: [11, 14]
-  k: Win Shift
+  k: ⇧⌥
 - p: [13, 14]
-  k: Win Alt
+  k: ⌥⌘
+- p: [11, 14]
+  k: ⇧⌘
+- p: [10, 14]
+  k: ^⌘
 - p: [10, 13]
-  k: Ctrl Alt
+  k: ^⌥
 - p: [3, 4]
   k: ᛒx
 - p: [0, 1]
   k: ᛒ/ψ
-- p: [13, 16]
-  k: asdf;lkj
-- p: [10, 11, 12, 13]
-  k: Ctrl Shift Alt
 - p: [0, 10, 20]
   k: boot
+- p: [10, 11, 12, 13]
+  k: ^⇧⌥
+- p: [13, 16]
+  k: asdf;lkj
