@@ -12,10 +12,12 @@
 #define EUCALYN	3
 #define FUNC	4
 #define NUMB	5
-#define WIN		6
+#define OTHER	6
 
 #define NONE &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none \
              &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none
+
+#define COMBO(NAME, TM, KP, B) NAME { slow-release; timeout-ms = <TM>; key-positions = <KP>; bindings = <B>; };
 
 &lt { flavor = "hold-preferred"; };
 &mt { flavor = "hold-preferred"; quick-tap-ms = <300>; };
@@ -113,11 +115,11 @@
 								&trans				&trans			&kp SPACE		&trans			&trans		&kp ENTER
 			>;
 		};
-		window {
+		other {
 			bindings = <
-				&kp C_VOL_UP	&none				&none				&none				&none				&none	&none	&none	&none	&none
-				&kp C_VOL_DN 	&hkp RC(RGUI) LEFT	&hkp RS(RGUI) LEFT	&hkp RS(RGUI) RIGHT	&hkp RC(RGUI) RIGHT	&none	&none	&none	&none	&none
-				&kp C_MUTE		&hkp RWIN LEFT		&hkp RWIN UP		&hkp RWIN DOWN		&hkp RWIN RIGHT		&none	&none	&none	&none	&none
+				&bt BT_SEL 0	&bt BT_SEL 1		&bt BT_SEL 2		&bt BT_SEL 3		&bt BT_SEL 4		&none	&none	&none	&none	&none
+				&kp C_VOL_UP 	&hkp RC(RGUI) LEFT	&hkp RS(RGUI) LEFT	&hkp RS(RGUI) RIGHT	&hkp RC(RGUI) RIGHT	&none	&none	&none	&none	&none
+				&kp C_VOL_DN	&hkp RWIN LEFT		&hkp RWIN UP		&hkp RWIN DOWN		&hkp RWIN RIGHT		&none	&none	&none	&none	&none
 								&trans				&trans				&trans				&trans				&trans	&trans
 			>;
 		};
@@ -127,42 +129,21 @@
 		
 		compatible = "zmk,combos";
 		
-		// bootloader
-		bootloader	{ slow-release; timeout-ms = <35>; key-positions = <0 10 20>; bindings = <&bootloader>; };
-		
-		// bt
-		bt_sel_0	{ slow-release; timeout-ms = <35>; key-positions = < 5 15>; bindings = <&bt BT_SEL 0>; };
-		bt_sel_1	{ slow-release; timeout-ms = <35>; key-positions = < 6 16>; bindings = <&bt BT_SEL 1>; };
-		bt_sel_2	{ slow-release; timeout-ms = <35>; key-positions = < 7 17>; bindings = <&bt BT_SEL 2>; };
-		bt_sel_3	{ slow-release; timeout-ms = <35>; key-positions = < 8 18>; bindings = <&bt BT_SEL 3>; };
-		bt_sel_4	{ slow-release; timeout-ms = <35>; key-positions = < 9 19>; bindings = <&bt BT_SEL 4>; };
-		bt_clr		{ slow-release; timeout-ms = <35>; key-positions = <9 19 29>; bindings = <&bt BT_CLR>; };
-		out_tog		{ slow-release; timeout-ms = <35>; key-positions = <5 15 25>; bindings = <&out OUT_TOG>; };
-		
-		// macro
-		home	{ slow-release; timeout-ms = <35>; key-positions = <13 16>; bindings = <&home>; };
-		
-		// mouse button
-		single_mb1	{ slow-release; timeout-ms = <35>; key-positions = <16 17>; bindings = <&mkp MB1>; };
-		single_mb2	{ slow-release; timeout-ms = <35>; key-positions = <17 18>; bindings = <&mkp MB2>; };
-		single_mb3	{ slow-release; timeout-ms = <35>; key-positions = <16 18>; bindings = <&mkp MB3>; };
-		single_mb4	{ slow-release; timeout-ms = <35>; key-positions = <26 27>; bindings = <&mkp MB4>; };
-		single_mb5	{ slow-release; timeout-ms = <35>; key-positions = <27 28>; bindings = <&mkp MB5>; };
-		double_mb1	{ slow-release; timeout-ms = <35>; key-positions = <16 17 18>; bindings = <&mkp_2mb1>; };
-		triple_mb1	{ slow-release; timeout-ms = <35>; key-positions = <26 27 28>; bindings = <&mkp_3mb1>; };
-		
-		// home row mods
-		hrm_lctl		{ slow-release; timeout-ms = <35>; key-positions = <10 11>; bindings = <&kp LCTRL>; };
-		hrm_lsht		{ slow-release; timeout-ms = <35>; key-positions = <11 12>; bindings = <&kp LSHFT>; };
-		hrm_lalt		{ slow-release; timeout-ms = <35>; key-positions = <12 13>; bindings = <&kp LALT>; };
-		hrm_lgui		{ slow-release; timeout-ms = <35>; key-positions = <12 14>; bindings = <&kp LGUI>; };
-		hrm_lgui_lctl	{ slow-release; timeout-ms = <35>; key-positions = <10 14>; bindings = <&kp LG(LCTRL)>; };
-		hrm_lgui_lsht	{ slow-release; timeout-ms = <35>; key-positions = <11 14>; bindings = <&kp LG(LSHFT)>; };
-		hrm_lgui_lalt	{ slow-release; timeout-ms = <35>; key-positions = <13 14>; bindings = <&kp LG(LALT)>; };
-		hrm_lctl_lalt	{ slow-release; timeout-ms = <35>; key-positions = <10 13>; bindings = <&kp LC(LALT)>; };
-		hrm_lctl_lsht	{ slow-release; timeout-ms = <35>; key-positions = <10 11 12>; bindings = <&kp LC(LSHFT)>; };
-		hrm_lsht_lalt	{ slow-release; timeout-ms = <35>; key-positions = <11 12 13>; bindings = <&kp LS(LALT)>; };
-		hrm_lmeh		{ slow-release; timeout-ms = <35>; key-positions = <10 11 12 13>; bindings = <&kp LC(LS(LALT))>; };
+		COMBO(single_mb1, 35, 16 17, &mkp MB1);				COMBO(single_mb2, 35, 17 18, &mkp MB2);
+		COMBO(single_mb4, 35, 26 27, &mkp MB4);				COMBO(single_mb5, 35, 27 28, &mkp MB5);
+		COMBO(double_mb1, 35, 16 17 18, &mkp_2mb1);			COMBO(triple_mb1, 35, 26 27 28, &mkp_3mb1);
+		COMBO(single_mb3, 35, 16 18, &mkp MB3);				COMBO(mute, 35, 10 20, &kp C_MUTE);
+
+		COMBO(hrm_lctl, 35, 10 11, &kp LCTRL);				COMBO(hrm_lsht, 35, 11 12, &kp LSHFT);
+		COMBO(hrm_lalt, 35, 12 13, &kp LALT);				COMBO(hrm_lgui, 35, 12 14, &kp LGUI);
+		COMBO(hrm_lctl_lsht, 35, 10 11 12, &kp LC(LSHFT));	COMBO(hrm_lsht_lalt, 35, 11 12 13, &kp LS(LALT));
+		COMBO(hrm_lgui_lctl, 35, 10 14, &kp LG(LCTRL));		COMBO(hrm_lgui_lsht, 35, 11 14, &kp LG(LSHFT));
+		COMBO(hrm_lgui_lalt, 35, 13 14, &kp LG(LALT));		COMBO(hrm_lctl_lalt, 35, 10 13, &kp LC(LALT));
+
+		COMBO(bt_clr, 35, 4, 5, &bt BT_CLR);				COMBO(out_tog, 35, 0, 1, &out OUT_TOG);
+		COMBO(home, 35, 13 16, &home);						COMBO(hrm_lmeh, 35, 10 11 12 13, &kp LC(LS(LALT)));
+
+		COMBO(bootloader, 35, 0 10 20, &bootloader);
 	};
 };
 

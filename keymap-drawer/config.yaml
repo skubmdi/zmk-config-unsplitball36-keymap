@@ -4,21 +4,21 @@ draw_config:
   append_colon_to_layer_header: false
 parse_config:
   raw_binding_map:
-    "&base_layer": "BASE"
-    "&bootloader": "BOOT"
+    "&bootloader": "Bootloader"
+    "&base_layer": "Toggle Base Layer"
     "&home": "asdf;lkj"
-    "&mkp MB1": "Mouse Button1"
-    "&mkp MB2": "Mouse Button2"
-    "&mkp MB3": "Mouse Button3"
-    "&mkp MB4": "Mouse Button4"
-    "&mkp MB5": "Mouse Button5"
+    "&mkp MB1": "Mouse Left"
+    "&mkp MB2": "Mouse Right"
+    "&mkp MB3": "Mouse Wheel"
+    "&mkp MB4": "Mouse Back"
+    "&mkp MB5": "Mouse Forward"
     "&mkp_2mb1": "Double Click"
     "&mkp_3mb1": "Triple Click"
-    "&bt BT_SEL 0": "BT0 SELECT"
-    "&bt BT_SEL 1": "BT1 SELECT"
-    "&bt BT_SEL 2": "BT2 SELECT"
-    "&bt BT_SEL 3": "BT3 SELECT"
-    "&bt BT_SEL 4": "BT4 SELECT"
+    "&bt BT_SEL 0": "Slot0 Select"
+    "&bt BT_SEL 1": "Slot1 Select"
+    "&bt BT_SEL 2": "Slot2 Select"
+    "&bt BT_SEL 3": "Slot3 Select"
+    "&bt BT_SEL 4": "Slot4 Select"
   mark_alternate_layer_activators: true
   modifier_fn_map:
     left_ctrl: Ctrl
@@ -29,51 +29,63 @@ parse_config:
     right_alt: Alt
     left_gui: Win
     right_gui: Win
-    keycode_combiner: '{mods} {key}'
+    keycode_combiner: "{mods} {key}"
+    mod_combiner: "{mod_1} {mod_2}"
   zmk_keycode_map:
-    SEMI: ';+'
-    COMMA: ',<'
-    DOT: '.>'
-    SLASH: '/?'
-    GRAVE: '半/全'
-    SPACE: '␣'
-    TAB: '↹'
-    ENTER: '⏎'
-    INT2: 'あ/ア'
-    MINUS: '-='
-    EQUAL: '^~'
-    INT3: '\|'
-    LEFT: '←'
-    DOWN: '↓'
-    UP: '↑'
-    RIGHT: '→'
-    HOME: '↖'
-    PG_DN: '⤒'
-    PG_UP: '⤓'
-    END: '↘'
-    PSCRN: '⎙'
-    SLCK: '⇳'
-    PAUSE_BREAK: '⎉'
-    INS: 'Ins'
-    BSPC: '⌫'
-    DEL: '⌦'
-    K_APP: '≣'
-    N1: '1!'
-    N2: '2"'
-    N3: '3#'
-    N4: '4$'
-    N5: '5%'
-    N6: '6&'
-    N7: '7'''
-    N8: '8('
-    N9: '9)'
-    KP_SLASH: '(/)'
-    KP_ASTERISK: '(*)'
-    KP_MINUS: '(-)'
-    KP_PLUS: '(+)'
-    KP_DOT: '(.)'
-    SQT: ':*'
-    LBKT: '@`'
-    RBKT: '[{'
-    NUHS: ']}'
-    INT1: '\_'
+    SEMI: ";+"
+    COMMA: ",<"
+    DOT: ".>"
+    SLASH: "/?"
+    GRAVE: "半/全"
+    SPACE: "␣"
+    TAB: "↹"
+    ENTER: "⏎"
+    INT2: "あ/ア"
+    MINUS: "-="
+    EQUAL: "^~"
+    INT3: "\\|"
+    LEFT: "←"
+    DOWN: "↓"
+    UP: "↑"
+    RIGHT: "→"
+    HOME: "↖"
+    PG_DN: "⤒"
+    PG_UP: "⤓"
+    END: "↘"
+    PSCRN: "⎙"
+    SLCK: "⇳"
+    PAUSE_BREAK: "⎉"
+    INS: "Ins"
+    BSPC: "⌫"
+    DEL: "⌦"
+    K_APP: "≣"
+    N1: "1!"
+    N2: "2\""
+    N3: "3#"
+    N4: "4$"
+    N5: "5%"
+    N6: "6&"
+    N7: "7 '"
+    N8: "8("
+    N9: "9)"
+    KP_SLASH: "(/)"
+    KP_ASTERISK: "(*)"
+    KP_MINUS: "(-)"
+    KP_PLUS: "(+)"
+    KP_DOT: "(.)"
+    SQT: ":*"
+    LBKT: "@`"
+    RBKT: "[{"
+    NUHS: "]}"
+    INT1: "\\_"
+    C_VOL_UP: "🔊"
+    C_VOL_DN: "🔉"
+    C_MUTE: "🔇"
+    LCTRL: "Ctrl"
+    LSHFT: "Shift"
+    LALT: "Alt"
+    LGUI: "Win"
+    RCTRL: "Ctrl"
+    RSHFT: "Shift"
+    RALT: "Alt"
+    RGUI: "Win"
