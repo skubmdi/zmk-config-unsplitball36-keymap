@@ -17,7 +17,7 @@
 #define NONE &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none \
              &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none
 
-#define COMBO(NAME, TM, KP, B) NAME { slow-release; timeout-ms = <TM>; key-positions = <KP>; bindings = <B>; };
+#define COMBO(NAME, TM, KP, B) NAME { slow-release; timeout-ms = <TM>; key-positions = KP; bindings = B; };
 
 &lt { flavor = "hold-preferred"; };
 &mt { flavor = "hold-preferred"; quick-tap-ms = <300>; };
@@ -129,21 +129,21 @@
 		
 		compatible = "zmk,combos";
 		
-		COMBO(single_mb1, 35, 16 17, &mkp MB1);				COMBO(single_mb2, 35, 17 18, &mkp MB2);
-		COMBO(single_mb4, 35, 26 27, &mkp MB4);				COMBO(single_mb5, 35, 27 28, &mkp MB5);
-		COMBO(double_mb1, 35, 16 17 18, &mkp_2mb1);			COMBO(triple_mb1, 35, 26 27 28, &mkp_3mb1);
-		COMBO(single_mb3, 35, 16 18, &mkp MB3);				COMBO(mute, 35, 10 20, &kp C_MUTE);
+		COMBO(single_mb1, 35, <16 17>, <&mkp MB1>);				COMBO(single_mb2, 35, <17 18>, <&mkp MB2>);
+		COMBO(single_mb4, 35, <26 27>, <&mkp MB4>);				COMBO(single_mb5, 35, <27 28>, <&mkp MB5>);
+		COMBO(double_mb1, 35, <16 17 18>, <&mkp_2mb1>);			COMBO(triple_mb1, 35, <26 27 28>, <&mkp_3mb1>);
+		COMBO(single_mb3, 35, <16 18>, <&mkp MB3>);				COMBO(mute, 35, <10 20>, <&kp C_MUTE>);
 
-		COMBO(hrm_lctl, 35, 10 11, &kp LCTRL);				COMBO(hrm_lsht, 35, 11 12, &kp LSHFT);
-		COMBO(hrm_lalt, 35, 12 13, &kp LALT);				COMBO(hrm_lgui, 35, 12 14, &kp LGUI);
-		COMBO(hrm_lctl_lsht, 35, 10 11 12, &kp LC(LSHFT));	COMBO(hrm_lsht_lalt, 35, 11 12 13, &kp LS(LALT));
-		COMBO(hrm_lgui_lctl, 35, 10 14, &kp LG(LCTRL));		COMBO(hrm_lgui_lsht, 35, 11 14, &kp LG(LSHFT));
-		COMBO(hrm_lgui_lalt, 35, 13 14, &kp LG(LALT));		COMBO(hrm_lctl_lalt, 35, 10 13, &kp LC(LALT));
+		COMBO(hrm_lctl, 35, <10 11>, <&kp LCTRL>);				COMBO(hrm_lsht, 35, <11 12>, <&kp LSHFT>);
+		COMBO(hrm_lalt, 35, <12 13>, <&kp LALT>);				COMBO(hrm_lgui, 35, <12 14>, <&kp LGUI>);
+		COMBO(hrm_lctl_lsht, 35, <10 11 12>, <&kp LC(LSHFT)>);	COMBO(hrm_lsht_lalt, 35, <11 12 13>, <&kp LS(LALT)>);
+		COMBO(hrm_lgui_lctl, 35, <10 14>, <&kp LG(LCTRL)>);		COMBO(hrm_lgui_lsht, 35, <11 14>, <&kp LG(LSHFT)>);
+		COMBO(hrm_lgui_lalt, 35, <13 14>, <&kp LG(LALT)>);		COMBO(hrm_lctl_lalt, 35, <10 13>, <&kp LC(LALT)>);
 
-		COMBO(bt_clr, 35, 4, 5, &bt BT_CLR);				COMBO(out_tog, 35, 0, 1, &out OUT_TOG);
-		COMBO(home, 35, 13 16, &home);						COMBO(hrm_lmeh, 35, 10 11 12 13, &kp LC(LS(LALT)));
+		COMBO(bt_clr, 35, <4 5>, <&bt BT_CLR>);					COMBO(out_tog, 35, <0 1>, <&out OUT_TOG>);
+		COMBO(home, 35, <13 16>, <&home>);						COMBO(hrm_lmeh, 35, <10 11 12 13>, <&kp LC(LS(LALT))>);
 
-		COMBO(bootloader, 35, 0 10 20, &bootloader);
+		COMBO(bootloader, 35, <0 10 20>, <&bootloader>);
 	};
 };
 
