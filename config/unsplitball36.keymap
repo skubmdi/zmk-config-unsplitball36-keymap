@@ -137,13 +137,13 @@
 		COMBO(hrm_lctl, 35, <10 11>, <&kp LCTRL>);				COMBO(hrm_lsht, 35, <11 12>, <&kp LSHFT>);
 		COMBO(hrm_lalt, 35, <12 13>, <&kp LALT>);				COMBO(hrm_lgui, 35, <12 14>, <&kp LGUI>);
 		COMBO(hrm_lctl_lsht, 35, <10 11 12>, <&kp LC(LSHFT)>);	COMBO(hrm_lsht_lalt, 35, <11 12 13>, <&kp LS(LALT)>);
-		COMBO(hrm_lgui_lctl, 35, <10 14>, <&kp LG(LCTRL)>);		COMBO(hrm_lgui_lsht, 35, <11 14>, <&kp LG(LSHFT)>);
-		COMBO(hrm_lgui_lalt, 35, <13 14>, <&kp LG(LALT)>);		COMBO(hrm_lctl_lalt, 35, <10 13>, <&kp LC(LALT)>);
+		COMBO(hrm_lalt_lgui, 35, <13 14>, <&kp LA(LGUI)>);		COMBO(hrm_lsht_lgui, 35, <11 14>, <&kp LS(LGUI)>);
+		COMBO(hrm_lctl_lgui, 35, <10 14>, <&kp LC(LGUI)>);		COMBO(hrm_lctl_lalt, 35, <10 13>, <&kp LC(LALT)>);
 
 		COMBO(bt_clr, 35, <3 4>, <&bt BT_CLR>);					COMBO(out_tog, 35, <0 1>, <&out OUT_TOG>);
-		COMBO(home, 35, <13 16>, <&home>);						COMBO(hrm_lmeh, 35, <10 11 12 13>, <&kp LC(LS(LALT))>);
+		COMBO(bootloader, 35, <0 10 20>, <&bootloader>);		COMBO(hrm_lmeh, 35, <10 11 12 13>, <&kp LC(LS(LALT))>);
 
-		COMBO(bootloader, 35, <0 10 20>, <&bootloader>);
+		COMBO(home, 35, <13 16>, <&home>);
 	};
 };
 
