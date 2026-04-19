@@ -31,7 +31,7 @@ layers:
   - ',<'
   - .>
   - /?
-  - Toggle Base Layer
+  - Base
   - {t: 半/全, h: number}
   - {t: ␣, h: function}
   - {t: ↹, h: other}
@@ -68,7 +68,7 @@ layers:
   - W
   - V
   - Z
-  - Toggle Base Layer
+  - Base
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -105,7 +105,7 @@ layers:
   - ',<'
   - .>
   - /?
-  - Toggle Base Layer
+  - Base
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -142,7 +142,7 @@ layers:
   - J
   - L
   - /?
-  - Toggle Base Layer
+  - Base
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -223,11 +223,11 @@ layers:
   - {type: held alternate}
   - ⏎
   other:
-  - Slot0 Select
-  - Slot1 Select
-  - Slot2 Select
-  - Slot3 Select
-  - Slot4 Select
+  - ᛒ1
+  - ᛒ2
+  - ᛒ3
+  - ᛒ4
+  - ᛒ5
   - ''
   - ''
   - ''
