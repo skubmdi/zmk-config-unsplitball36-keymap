@@ -157,7 +157,7 @@ layers:
   - -=
   - ^~
   - \|
-  - {t: Ins, h: Win}
+  - {t: ⭿, h: Win}
   - {t: ⌦, h: Ctrl}
   - F6
   - F7
@@ -234,20 +234,20 @@ layers:
   - ''
   - ''
   - 🔊
-  - '&hkp RC(RGUI) LEFT'
-  - '&hkp RS(RGUI) LEFT'
-  - '&hkp RS(RGUI) RIGHT'
-  - '&hkp RC(RGUI) RIGHT'
+  - Ctrl Win ←
+  - Shift Win ←
+  - Shift Win →
+  - Ctrl Win →
   - ''
   - ''
   - ''
   - ''
   - ''
   - 🔉
-  - '&hkp RWIN LEFT'
-  - '&hkp RWIN UP'
-  - '&hkp RWIN DOWN'
-  - '&hkp RWIN RIGHT'
+  - Win ←
+  - Win ↑
+  - Win ↓
+  - Win →
   - ''
   - ''
   - ''
