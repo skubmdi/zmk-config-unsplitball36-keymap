@@ -3,6 +3,18 @@ draw_config:
   separate_combo_diagrams: true
   append_colon_to_layer_header: false
 parse_config:
+  mark_alternate_layer_activators: true
+  modifier_fn_map:
+    left_ctrl: Ctrl
+    right_ctrl: Ctrl
+    left_shift: Shift
+    right_shift: Shift
+    left_alt: Alt
+    right_alt: Alt
+    left_gui: Win
+    right_gui: Win
+    mod_combiner: "{mod_1} {mod_2}"
+    keycode_combiner: "{mods} {key}"
   raw_binding_map:
     "&bootloader": "boot"
     "&base_layer": "base"
@@ -21,18 +33,14 @@ parse_config:
     "&bt BT_SEL 4": "ᛒ5"
     "&bt BT_CLR": "ᛒx"
     "&out OUT_TOG": "ᛒ/ψ"
-  mark_alternate_layer_activators: true
-  modifier_fn_map:
-    left_ctrl: Ctrl
-    right_ctrl: Ctrl
-    left_shift: Shift
-    right_shift: Shift
-    left_alt: Alt
-    right_alt: Alt
-    left_gui: Win
-    right_gui: Win
-    mod_combiner: "{mod_1} {mod_2}"
-    keycode_combiner: "{mods} {key}"
+    "&hkp RWIN UP": "Win ↑"
+    "&hkp RWIN DOWN": "Win ↓"
+    "&hkp RWIN LEFT": "Win ←"
+    "&hkp RWIN RIGHT": "Win →"
+    "&hkp RC(RGUI) LEFT": "Ctrl Win ←"
+    "&hkp RS(RGUI) LEFT": "Shift Win ←"
+    "&hkp RC(RGUI) RIGHT": "Ctrl Win →"
+    "&hkp RS(RGUI) RIGHT": "Shift Win →"
   zmk_keycode_map:
     SEMI: ";+"
     COMMA: ",<"
@@ -57,7 +65,7 @@ parse_config:
     PSCRN: "⎙"
     SLCK: "⇳"
     PAUSE_BREAK: "⎉"
-    INS: "Ins"
+    INS: "⭿"
     BSPC: "⌫"
     DEL: "⌦"
     K_APP: "≣"

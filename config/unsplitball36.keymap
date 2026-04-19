@@ -109,9 +109,9 @@
 		};
 		number {
 			bindings = <
-				&kp N1			&kp N2				&kp N3			&kp N4			&kp N5			&kp N1		&kp N2		&kp N3		&kp N4		&mt RCTRL N5
-				&kp N6			&kp N7				&kp N8			&kp N9			&kp N0			&kp N6		&kp N7		&kp N8		&kp N9		&mt RSHFT SQT
-				&kp KP_SLASH	&kp KP_ASTERISK		&kp KP_MINUS	&kp KP_PLUS		&kp KP_DOT		&kp N0		&kp LBKT	&kp RBKT	&kp NUHS	&mt RALT INT1
+				&kp N1			&kp N2				&kp N3			&kp N4			&kp N5			&kp N1		&kp N2		&kp N3		&mt RGUI N4		&mt RCTRL N5
+				&kp N6			&kp N7				&kp N8			&kp N9			&kp N0			&kp N6		&kp N7		&kp N8		&kp N9			&mt RSHFT SQT
+				&kp KP_SLASH	&kp KP_ASTERISK		&kp KP_MINUS	&kp KP_PLUS		&kp KP_DOT		&kp N0		&kp LBKT	&kp RBKT	&kp NUHS		&mt RALT INT1
 								&trans				&trans			&kp SPACE		&trans			&trans		&kp ENTER
 			>;
 		};
