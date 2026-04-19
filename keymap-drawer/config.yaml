@@ -4,8 +4,8 @@ draw_config:
   append_colon_to_layer_header: false
 parse_config:
   raw_binding_map:
-    "&bootloader": "Bootloader"
-    "&base_layer": "Base"
+    "&bootloader": "boot"
+    "&base_layer": "base"
     "&home": "asdf;lkj"
     "&mkp MB1": "Mouse Left"
     "&mkp MB2": "Mouse Right"
