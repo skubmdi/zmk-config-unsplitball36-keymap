@@ -31,10 +31,10 @@ layers:
   - ',<'
   - .>
   - /?
-  - BASE
+  - Toggle Base Layer
   - {t: 半/全, h: number}
   - {t: ␣, h: function}
-  - {t: ↹, h: window}
+  - {t: ↹, h: other}
   - {t: あ/ア, h: number}
   - {t: ⏎, h: function}
   dvorak:
@@ -68,7 +68,7 @@ layers:
   - W
   - V
   - Z
-  - BASE
+  - Toggle Base Layer
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -105,7 +105,7 @@ layers:
   - ',<'
   - .>
   - /?
-  - BASE
+  - Toggle Base Layer
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -142,7 +142,7 @@ layers:
   - J
   - L
   - /?
-  - BASE
+  - Toggle Base Layer
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -157,8 +157,8 @@ layers:
   - -=
   - ^~
   - \|
-  - {t: Ins, h: RGUI}
-  - {t: ⌦, h: RCTRL}
+  - {t: Ins, h: Win}
+  - {t: ⌦, h: Ctrl}
   - F6
   - F7
   - F8
@@ -168,7 +168,7 @@ layers:
   - ↓
   - ↑
   - →
-  - {t: ⌫, h: RSHFT}
+  - {t: ⌫, h: Shift}
   - ⎙
   - ⇳
   - ⎉
@@ -178,7 +178,7 @@ layers:
   - ⤒
   - ⤓
   - ↘
-  - {t: ≣, h: RALT}
+  - {t: ≣, h: Alt}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ␣, type: held}
@@ -195,17 +195,17 @@ layers:
   - 2"
   - 3#
   - 4$
-  - {t: 5%, h: RCTRL}
+  - {t: 5%, h: Ctrl}
   - 6&
-  - 7'
+  - 7 '
   - 8(
   - 9)
   - '0'
   - 6&
-  - 7'
+  - 7 '
   - 8(
   - 9)
-  - {t: ':*', h: RSHFT}
+  - {t: ':*', h: Shift}
   - (/)
   - (*)
   - (-)
@@ -215,25 +215,25 @@ layers:
   - '@`'
   - '[{'
   - ']}'
-  - {t: \_, h: RALT}
+  - {t: \_, h: Alt}
   - {t: ▽, type: trans}
   - {type: held}
   - ␣
   - {t: ▽, type: trans}
   - {type: held alternate}
   - ⏎
-  window:
-  - VOL UP
+  other:
+  - Slot0 Select
+  - Slot1 Select
+  - Slot2 Select
+  - Slot3 Select
+  - Slot4 Select
   - ''
   - ''
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - VOL DN
+  - 🔊
   - '&hkp RC(RGUI) LEFT'
   - '&hkp RS(RGUI) LEFT'
   - '&hkp RS(RGUI) RIGHT'
@@ -243,7 +243,7 @@ layers:
   - ''
   - ''
   - ''
-  - MUTE
+  - 🔉
   - '&hkp RWIN LEFT'
   - '&hkp RWIN UP'
   - '&hkp RWIN DOWN'
@@ -260,57 +260,49 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
-- p: [0, 10, 20]
-  k: BOOT
-- p: [5, 15]
-  k: BT0 SELECT
-- p: [6, 16]
-  k: BT1 SELECT
-- p: [7, 17]
-  k: BT2 SELECT
-- p: [8, 18]
-  k: BT3 SELECT
-- p: [9, 19]
-  k: BT4 SELECT
-- p: [9, 19, 29]
-  k: BT CLR
-- p: [5, 15, 25]
-  k: OUT TOG
-- p: [13, 16]
-  k: asdf;lkj
 - p: [16, 17]
-  k: Mouse Button1
+  k: Mouse Left
 - p: [17, 18]
-  k: Mouse Button2
-- p: [16, 18]
-  k: Mouse Button3
+  k: Mouse Right
 - p: [26, 27]
-  k: Mouse Button4
+  k: Mouse Back
 - p: [27, 28]
-  k: Mouse Button5
+  k: Mouse Forward
 - p: [16, 17, 18]
   k: Double Click
 - p: [26, 27, 28]
   k: Triple Click
+- p: [16, 18]
+  k: Mouse Wheel
+- p: [10, 20]
+  k: 🔇
 - p: [10, 11]
-  k: LCTRL
+  k: Ctrl
 - p: [11, 12]
-  k: LSHFT
+  k: Shift
 - p: [12, 13]
-  k: LALT
+  k: Alt
 - p: [12, 14]
-  k: LGUI
-- p: [10, 14]
-  k: Win LCTRL
-- p: [11, 14]
-  k: Win LSHFT
-- p: [13, 14]
-  k: Win LALT
-- p: [10, 13]
-  k: Ctrl LALT
+  k: Win
 - p: [10, 11, 12]
-  k: Ctrl LSHFT
+  k: Ctrl Shift
 - p: [11, 12, 13]
-  k: Shift LALT
+  k: Shift Alt
+- p: [10, 14]
+  k: Win Ctrl
+- p: [11, 14]
+  k: Win Shift
+- p: [13, 14]
+  k: Win Alt
+- p: [10, 13]
+  k: Ctrl Alt
+- p: [4, 5]
+  k: BT CLR
+- p: [0, 1]
+  k: OUT TOG
+- p: [13, 16]
+  k: asdf;lkj
 - p: [10, 11, 12, 13]
-  k: Ctrl+Shift LALT
+  k: Ctrl Shift Alt
+- p: [0, 10, 20]
+  k: Bootloader
