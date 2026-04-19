@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: unsplitball36}
 layers:
-  qwerty:
+  base_qwerty:
   - Q
   - W
   - E
@@ -37,7 +37,7 @@ layers:
   - {t: ↹, h: other}
   - {t: あ/ア, h: number}
   - {t: ⏎, h: function}
-  dvorak:
+  base_dvorak:
   - /?
   - ',<'
   - .>
@@ -74,7 +74,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  colemak:
+  base_colemak:
   - Q
   - W
   - F
@@ -111,7 +111,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  eucalyn:
+  base_eucalyn:
   - Q
   - W
   - ',<'
@@ -296,10 +296,10 @@ combos:
   k: Win Alt
 - p: [10, 13]
   k: Ctrl Alt
-- p: [4, 5]
-  k: BT CLR
+- p: [3, 4]
+  k: ᛒx
 - p: [0, 1]
-  k: OUT TOG
+  k: ᛒ/ψ
 - p: [13, 16]
   k: asdf;lkj
 - p: [10, 11, 12, 13]
