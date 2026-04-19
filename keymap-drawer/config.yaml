@@ -19,6 +19,8 @@ parse_config:
     "&bt BT_SEL 2": "ᛒ3"
     "&bt BT_SEL 3": "ᛒ4"
     "&bt BT_SEL 4": "ᛒ5"
+    "&bt BT_CLR": "ᛒx"
+    "&out OUT_TOG": "ᛒ/ψ"
   mark_alternate_layer_activators: true
   modifier_fn_map:
     left_ctrl: Ctrl
@@ -29,8 +31,8 @@ parse_config:
     right_alt: Alt
     left_gui: Win
     right_gui: Win
-    keycode_combiner: "{mods} {key}"
     mod_combiner: "{mod_1} {mod_2}"
+    keycode_combiner: "{mods} {key}"
   zmk_keycode_map:
     SEMI: ";+"
     COMMA: ",<"
