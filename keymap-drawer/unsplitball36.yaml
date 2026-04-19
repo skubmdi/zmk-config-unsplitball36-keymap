@@ -31,7 +31,7 @@ layers:
   - ',<'
   - .>
   - /?
-  - Base
+  - base
   - {t: 半/全, h: number}
   - {t: ␣, h: function}
   - {t: ↹, h: other}
@@ -68,7 +68,7 @@ layers:
   - W
   - V
   - Z
-  - Base
+  - base
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -105,7 +105,7 @@ layers:
   - ',<'
   - .>
   - /?
-  - Base
+  - base
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -142,7 +142,7 @@ layers:
   - J
   - L
   - /?
-  - Base
+  - base
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -305,4 +305,4 @@ combos:
 - p: [10, 11, 12, 13]
   k: Ctrl Shift Alt
 - p: [0, 10, 20]
-  k: Bootloader
+  k: boot
