@@ -31,7 +31,7 @@ layers:
   - ',<'
   - .>
   - /?
-  - base
+  - '&td_base'
   - {t: 半/全, h: number}
   - {t: ␣, h: function}
   - {t: ↹, h: other}
@@ -68,7 +68,7 @@ layers:
   - W
   - V
   - Z
-  - base
+  - '&td_base'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -105,7 +105,7 @@ layers:
   - ',<'
   - .>
   - /?
-  - base
+  - '&td_base'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -142,14 +142,14 @@ layers:
   - J
   - L
   - /?
-  - base
+  - '&td_base'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   function:
-  - ⎋
+  - '&td_grave'
   - F2
   - F3
   - F4
@@ -223,11 +223,11 @@ layers:
   - {type: held alternate}
   - ⏎
   other:
-  - ᛒ1
-  - ᛒ2
-  - ᛒ3
-  - ᛒ4
-  - ᛒ5
+  - '&td_bt0'
+  - '&td_bt1'
+  - '&td_bt2'
+  - '&td_bt3'
+  - '&td_bt4'
   - ''
   - ''
   - ''
