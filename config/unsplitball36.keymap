@@ -76,6 +76,13 @@
 			bindings = <&half>, <&kp INT2>;
 		};
 		
+		td_tab: td_tab {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <300>;
+			bindings = <&kp TAB>, <&hkp LSHFT TAB>;
+		};
+		
 		bt_clr: bt_clr {
 			compatible = "zmk,behavior-macro-one-param";
 			#binding-cells = <1>;
@@ -146,10 +153,10 @@
 		};
 		function {
 			bindings = <
-				&td_grave		&kp F2		&kp F3			&kp F4		&kp F5		&kp MINUS	&kp EQUAL	&kp INT3	&mt RGUI INS	&mt RCTRL DEL
+				&kp ESC		&kp F2		&kp F3			&kp F4		&kp F5		&kp MINUS	&kp EQUAL	&kp INT3	&mt RGUI INS	&mt RCTRL DEL
 				&kp F6		&kp F7		&kp F8			&kp F9		&kp F10		&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT		&mt RSHFT BSPC
 				&kp PSCRN	&kp SLCK	&kp PAUSE_BREAK	&kp F11		&kp F12		&kp HOME	&kp PG_DN	&kp PG_UP	&kp END			&mt RALT K_APP
-							&trans		&trans			&kp SPACE	&trans		&trans		&kp ENTER
+							&trans		&trans			&trans		&trans		&trans		&trans
 			>;
 		};
 		number {
@@ -157,7 +164,7 @@
 				&kp N1			&kp N2				&kp N3			&kp N4			&kp N5			&kp N1		&kp N2		&kp N3		&mt RGUI N4		&mt RCTRL N5
 				&kp N6			&kp N7				&kp N8			&kp N9			&kp N0			&kp N6		&kp N7		&kp N8		&kp N9			&mt RSHFT SQT
 				&kp KP_SLASH	&kp KP_ASTERISK		&kp KP_MINUS	&kp KP_PLUS		&kp KP_DOT		&kp N0		&kp LBKT	&kp RBKT	&kp NUHS		&mt RALT INT1
-								&trans				&trans			&kp SPACE		&trans			&trans		&kp ENTER
+								&trans				&trans			&trans			&trans			&trans		&trans
 			>;
 		};
 		other {
@@ -174,6 +181,8 @@
 		
 		compatible = "zmk,combos";
 		
+		COMBO(bootloader, 35, <0 10 20>, <&bootloader>);		COMBO(out_tog, 35, <0 1>, <&out OUT_TOG>);
+		
 		COMBO(single_mb1, 35, <16 17>, <&mkp MB1>);				COMBO(single_mb2, 35, <17 18>, <&mkp MB2>);
 		COMBO(single_mb4, 35, <26 27>, <&mkp MB4>);				COMBO(single_mb5, 35, <27 28>, <&mkp MB5>);
 		COMBO(double_mb1, 35, <16 17 18>, <&mkp_2mb1>);			COMBO(triple_mb1, 35, <26 27 28>, <&mkp_3mb1>);
@@ -185,8 +194,7 @@
 		COMBO(hrm_lalt_lgui, 35, <13 14>, <&kp LA(LGUI)>);		COMBO(hrm_lsht_lgui, 35, <11 14>, <&kp LS(LGUI)>);
 		COMBO(hrm_lctl_lgui, 35, <10 14>, <&kp LC(LGUI)>);		COMBO(hrm_lctl_lalt, 35, <10 13>, <&kp LC(LALT)>);
 
-		COMBO(bt_clr, 35, <3 4>, <&bt BT_CLR>);					COMBO(out_tog, 35, <0 1>, <&out OUT_TOG>);
-		COMBO(bootloader, 35, <0 10 20>, <&bootloader>);		COMBO(hrm_lmeh, 35, <10 11 12 13>, <&kp LC(LS(LALT))>);
+		COMBO(hrm_lmeh, 35, <10 11 12 13>, <&kp LC(LS(LALT))>);
 
 		COMBO(home, 35, <13 16>, <&home>);
 	};
