@@ -15,7 +15,7 @@
 #define OTHER	5
 
 #define NONE5 &none &none &none &none &none
-#define TRANCE6 &trans &trans &trans &trans &trans &trans
+#define TRANS6 &trans &trans &trans &trans &trans &trans
 
 #define COMBO(NAME, TM, POS, BIND) NAME {\
 	slow-release; timeout-ms = <TM>;\
