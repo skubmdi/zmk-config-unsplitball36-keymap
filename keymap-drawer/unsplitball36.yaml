@@ -31,7 +31,7 @@ layers:
   - ',<'
   - .>
   - /?
-  - base (TD)
+  - qwerty dvorak colemak eucalyn
   - {t: 半/全, h: number}
   - {t: ␣, h: function}
   - {t: ↹, h: other}
@@ -68,7 +68,7 @@ layers:
   - W
   - V
   - Z
-  - base (TD)
+  - qwerty dvorak colemak eucalyn
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -105,7 +105,7 @@ layers:
   - ',<'
   - .>
   - /?
-  - base (TD)
+  - qwerty dvorak colemak eucalyn
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -142,7 +142,7 @@ layers:
   - J
   - L
   - /?
-  - base (TD)
+  - qwerty dvorak colemak eucalyn
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -223,11 +223,11 @@ layers:
   - {type: held alternate}
   - {t: ▽, type: trans}
   other:
-  - ᛒ1/ᛒx (TD)
-  - ᛒ2/ᛒx (TD)
-  - ᛒ3/ᛒx (TD)
-  - ᛒ4/ᛒx (TD)
-  - ᛒ5/ᛒx (TD)
+  - ᛒ1 ᛒ1x
+  - ᛒ2 ᛒ2x
+  - ᛒ3 ᛒ3x
+  - ᛒ4 ᛒ4x
+  - ᛒ5 ᛒ5x
   - ''
   - ''
   - ''
