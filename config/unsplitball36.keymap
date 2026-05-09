@@ -56,11 +56,56 @@
 			bindings = <&macro_tap &kp A &kp S &kp D &kp F &kp SEMI &kp L &kp K &kp J>;
 		};
 		
-		base_layer: base_layer {
+		td_base: td_base {
 			compatible = "zmk,behavior-tap-dance";
 			#binding-cells = <0>;
 			tapping-term-ms = <1000>;
 			bindings = <&to QWERTY>, <&to DVORAK>, <&to COLEMAK>, <&to EUCALYN>;
+		};
+
+		half: half {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp INT2 &kp GRAVE>;
+		};
+
+		td_grave: td_grave {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <300>;
+			bindings = <&half>, <&kp INT2>;
+		};
+		
+		bt_clr: bt_clr {
+			compatible = "zmk,behavior-macro-one-param";
+			#binding-cells = <1>;
+			bindings = <&macro_param_1to2>, <&macro_tap &bt BT_SEL MACRO_PLACEHOLDER>, <&macro_tap &bt BT_CLR>
+			;
+		};
+
+		td_bt0: td_bt0 {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>; bindings = <&bt BT_SEL0>, <&bt_clr 0>;
+		};
+
+		td_bt1: td_bt1 {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>; bindings = <&bt BT_SEL1>, <&bt_clr 1>;
+		};
+
+		td_bt2: td_bt2 {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>; bindings = <&bt BT_SEL2>, <&bt_clr 2>;
+		};
+
+		td_bt3: td_bt3 {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>; bindings = <&bt BT_SEL3>, <&bt_clr 3>;
+		};
+		
+		td_bt4: td_bt4 {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>; bindings = <&bt BT_SEL4>, <&bt_clr 4>;
 		};
 	};
 	
@@ -72,7 +117,7 @@
 				&kp Q	&kp W		&kp E			&kp R			&kp T			&kp Y			&kp U	&kp I		&kp O		&kp P
 				&kp A	&kp S		&kp D			&kp F			&kp G			&kp H			&kp J	&kp K		&kp L		&kp SEMI
 				&kp Z	&kp X		&kp C			&kp V			&kp B			&kp N			&kp M	&kp COMMA	&kp DOT		&kp SLASH
-						&base_layer	&lt NUMB GRAVE	&lt FUNC SPACE	&lt OTHER TAB	&lt NUMB INT2	&lt FUNC ENTER
+						&td_base	&lt NUMB GRAVE	&lt FUNC SPACE	&lt OTHER TAB	&lt NUMB INT2	&lt FUNC ENTER
 			>;
 		};
 		base_dvorak {
@@ -80,7 +125,7 @@
 				&kp SLASH	&kp COMMA		&kp DOT		&kp P	&kp Y	&kp F	&kp G	&kp C	&kp R	&kp L
 				&kp A		&kp O			&kp E		&kp U	&kp I	&kp D	&kp H	&kp T	&kp N	&kp S
 				&kp SEMI	&kp Q			&kp J		&kp K	&kp X	&kp B	&kp M	&kp W	&kp V	&kp Z
-							&base_layer		&trans		&trans	&trans	&trans	&trans
+							&td_base		&trans		&trans	&trans	&trans	&trans
 			>;
 		};
 		base_colemak {
@@ -88,7 +133,7 @@
 				&kp Q	&kp W		&kp F	&kp P	&kp G	&kp J	&kp L	&kp U		&kp Y	&kp SEMI
 				&kp A	&kp R		&kp S	&kp T	&kp D	&kp H	&kp N	&kp E		&kp I	&kp O
 				&kp Z	&kp X		&kp C	&kp V	&kp B	&kp K	&kp M	&kp COMMA	&kp DOT	&kp SLASH
-						&base_layer	&trans	&trans	&trans	&trans	&trans
+						&td_base	&trans	&trans	&trans	&trans	&trans
 			>;
 		};
 		base_eucalyn {
@@ -96,12 +141,12 @@
 				&kp Q	&kp W		&kp COMMA	&kp DOT		&kp SEMI	&kp M	&kp R	&kp D	&kp Y	&kp P
 				&kp A	&kp O		&kp E		&kp I		&kp U		&kp G	&kp T	&kp K	&kp S	&kp N
 				&kp Z	&kp X		&kp C		&kp V		&kp F		&kp B	&kp H	&kp J	&kp L	&kp SLASH
-						&base_layer	&trans		&trans		&trans		&trans	&trans
+						&td_base	&trans		&trans		&trans		&trans	&trans
 			>;
 		};
 		function {
 			bindings = <
-				&kp ESC		&kp F2		&kp F3			&kp F4		&kp F5		&kp MINUS	&kp EQUAL	&kp INT3	&mt RGUI INS	&mt RCTRL DEL
+				&td_grave		&kp F2		&kp F3			&kp F4		&kp F5		&kp MINUS	&kp EQUAL	&kp INT3	&mt RGUI INS	&mt RCTRL DEL
 				&kp F6		&kp F7		&kp F8			&kp F9		&kp F10		&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT		&mt RSHFT BSPC
 				&kp PSCRN	&kp SLCK	&kp PAUSE_BREAK	&kp F11		&kp F12		&kp HOME	&kp PG_DN	&kp PG_UP	&kp END			&mt RALT K_APP
 							&trans		&trans			&kp SPACE	&trans		&trans		&kp ENTER
@@ -117,7 +162,7 @@
 		};
 		other {
 			bindings = <
-				&bt BT_SEL 0	&bt BT_SEL 1		&bt BT_SEL 2		&bt BT_SEL 3		&bt BT_SEL 4		&none	&none	&none	&none	&none
+				&td_bt0			&td_bt1				&td_bt2				&td_bt3				&td_bt4				&none	&none	&none	&none	&none
 				&kp C_VOL_UP 	&hkp RC(RGUI) LEFT	&hkp RS(RGUI) LEFT	&hkp RS(RGUI) RIGHT	&hkp RC(RGUI) RIGHT	&none	&none	&none	&none	&none
 				&kp C_VOL_DN	&hkp RWIN LEFT		&hkp RWIN UP		&hkp RWIN DOWN		&hkp RWIN RIGHT		&none	&none	&none	&none	&none
 								&trans				&trans				&trans				&trans				&trans	&trans
