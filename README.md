@@ -7,7 +7,9 @@ Tapping the base key switches the base layer. The valid tapping term is 1000ms.
 - One tap : qwerty
 - Two tap : dvorak
 - Three tap : colemak
+[](
 - Four tap: eucalyn
+)
 
 ## hold-tap Interrupt Flavor
 - lt : hold-preferred
