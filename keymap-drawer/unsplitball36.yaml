@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: unsplitball36}
 layers:
-  base_qwerty:
+  qwerty:
   - Q
   - W
   - E
@@ -37,7 +37,7 @@ layers:
   - {t: ↹, h: other}
   - {t: あ/ア, h: number}
   - {t: ⏎, h: function}
-  base_dvorak:
+  dvorak:
   - /?
   - ',<'
   - .>
@@ -68,13 +68,13 @@ layers:
   - W
   - V
   - Z
-  - qwerty dvorak colemak eucalyn
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  base_colemak:
+  - {t: ▽, type: trans}
+  colemak:
   - Q
   - W
   - F
@@ -105,13 +105,13 @@ layers:
   - ',<'
   - .>
   - /?
-  - qwerty dvorak colemak eucalyn
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  base_eucalyn:
+  - {t: ▽, type: trans}
+  eucalyn:
   - Q
   - W
   - ',<'
@@ -142,7 +142,7 @@ layers:
   - J
   - L
   - /?
-  - qwerty dvorak colemak eucalyn
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

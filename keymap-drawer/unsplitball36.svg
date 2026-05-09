@@ -135,8 +135,8 @@ text.trans { fill: #7e8184; }
 path.combo { stroke: #7f7f7f; }
 
 }</style>
-<g transform="translate(30, 0)" class="layer-base_qwerty">
-<text x="0" y="28" class="label" id="base_qwerty">base_qwerty</text>
+<g transform="translate(30, 0)" class="layer-qwerty">
+<text x="0" y="28" class="label" id="qwerty">qwerty</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 63)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -296,8 +296,8 @@ path.combo { stroke: #7f7f7f; }
 </a></g>
 </g>
 </g>
-<g transform="translate(30, 336)" class="layer-base_dvorak">
-<text x="0" y="28" class="label" id="base_dvorak">base_dvorak</text>
+<g transform="translate(30, 336)" class="layer-dvorak">
+<text x="0" y="28" class="label" id="dvorak">dvorak</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 63)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -419,11 +419,9 @@ path.combo { stroke: #7f7f7f; }
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">Z</text>
 </g>
-<g transform="translate(112, 238)" class="key keypos-30">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">qwerty</tspan><tspan x="0" dy="1.2em">dvorak</tspan><tspan x="0" dy="1.2em">…</tspan>
-</text>
+<g transform="translate(112, 238)" class="key trans keypos-30">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g transform="translate(168, 224)" class="key trans keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -447,8 +445,8 @@ path.combo { stroke: #7f7f7f; }
 </g>
 </g>
 </g>
-<g transform="translate(30, 672)" class="layer-base_colemak">
-<text x="0" y="28" class="label" id="base_colemak">base_colemak</text>
+<g transform="translate(30, 672)" class="layer-colemak">
+<text x="0" y="28" class="label" id="colemak">colemak</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 63)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -570,11 +568,9 @@ path.combo { stroke: #7f7f7f; }
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">/?</text>
 </g>
-<g transform="translate(112, 238)" class="key keypos-30">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">qwerty</tspan><tspan x="0" dy="1.2em">dvorak</tspan><tspan x="0" dy="1.2em">…</tspan>
-</text>
+<g transform="translate(112, 238)" class="key trans keypos-30">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g transform="translate(168, 224)" class="key trans keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -598,8 +594,8 @@ path.combo { stroke: #7f7f7f; }
 </g>
 </g>
 </g>
-<g transform="translate(30, 1008)" class="layer-base_eucalyn">
-<text x="0" y="28" class="label" id="base_eucalyn">base_eucalyn</text>
+<g transform="translate(30, 1008)" class="layer-eucalyn">
+<text x="0" y="28" class="label" id="eucalyn">eucalyn</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 63)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -721,11 +717,9 @@ path.combo { stroke: #7f7f7f; }
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">/?</text>
 </g>
-<g transform="translate(112, 238)" class="key keypos-30">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">qwerty</tspan><tspan x="0" dy="1.2em">dvorak</tspan><tspan x="0" dy="1.2em">…</tspan>
-</text>
+<g transform="translate(112, 238)" class="key trans keypos-30">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g transform="translate(168, 224)" class="key trans keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
