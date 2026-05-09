@@ -14,9 +14,6 @@
 #define NUMB	4
 #define OTHER	5
 
-#define NONE5 &none &none &none &none &none
-#define TRANS6 &trans &trans &trans &trans &trans &trans
-
 #define COMBO(NAME, TM, POS, BIND) NAME {\
 	slow-release; timeout-ms = <TM>;\
 	key-positions = POS; bindings = BIND;\
@@ -96,7 +93,7 @@
 				&kp SLASH	&kp COMMA	&kp DOT		&kp P	&kp Y	&kp F	&kp G	&kp C	&kp R	&kp L
 				&kp A		&kp O		&kp E		&kp U	&kp I	&kp D	&kp H	&kp T	&kp N	&kp S
 				&kp SEMI	&kp Q		&kp J		&kp K	&kp X	&kp B	&kp M	&kp W	&kp V	&kp Z
-							TRANS6
+							&trans		&trans		&trans	&trans	&trans	&trans
 			>;
 		};
 		colemak {
@@ -104,7 +101,7 @@
 				&kp Q	&kp W	&kp F	&kp P	&kp G	&kp J	&kp L	&kp U		&kp Y	&kp SEMI
 				&kp A	&kp R	&kp S	&kp T	&kp D	&kp H	&kp N	&kp E		&kp I	&kp O
 				&kp Z	&kp X	&kp C	&kp V	&kp B	&kp K	&kp M	&kp COMMA	&kp DOT	&kp SLASH
-						TRANS6
+						&trans	&trans	&trans	&trans	&trans	&trans
 			>;
 		};
 		// eucalyn {
@@ -112,7 +109,7 @@
 		// 		&kp Q	&kp W	&kp COMMA	&kp DOT		&kp SEMI	&kp M	&kp R	&kp D	&kp Y	&kp P
 		// 		&kp A	&kp O	&kp E		&kp I		&kp U		&kp G	&kp T	&kp K	&kp S	&kp N
 		// 		&kp Z	&kp X	&kp C		&kp V		&kp F		&kp B	&kp H	&kp J	&kp L	&kp SLASH
-		// 				TRANS6
+		// 				&trans	&trans		&trans		&trans		&trans	&trans
 		// 	>;
 		// };
 		function {
@@ -120,7 +117,7 @@
 				&kp ESC		&kp F2		&kp F3			&kp F4		&kp F5		&kp MINUS	&kp EQUAL	&kp INT3	&mt RGUI INS	&mt RCTRL DEL
 				&kp F6		&kp F7		&kp F8			&kp F9		&kp F10		&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT		&mt RSHFT BSPC
 				&kp PSCRN	&kp SLCK	&kp PAUSE_BREAK	&kp F11		&kp F12		&kp HOME	&kp PG_DN	&kp PG_UP	&kp END			&mt RALT K_APP
-							TRANS6
+							&trans		&trans			&trans		&trans		&trans		&trans
 			>;
 		};
 		number {
@@ -128,15 +125,15 @@
 				&kp N1			&kp N2				&kp N3			&kp N4			&kp N5			&kp N1		&kp N2		&kp N3		&mt RGUI N4		&mt RCTRL N5
 				&kp N6			&kp N7				&kp N8			&kp N9			&kp N0			&kp N6		&kp N7		&kp N8		&kp N9			&mt RSHFT SQT
 				&kp KP_SLASH	&kp KP_ASTERISK		&kp KP_MINUS	&kp KP_PLUS		&kp KP_DOT		&kp N0		&kp LBKT	&kp RBKT	&kp NUHS		&mt RALT INT1
-								TRANS6
+								&trans				&trans			&trans			&trans			&trans		&trans
 			>;
 		};
 		other {
 			bindings = <
-				&td_bt0			&td_bt1				&td_bt2				&td_bt3				&td_bt4				NONE5
-				&kp C_VOL_UP 	&hkp RC(RGUI) LEFT	&hkp RS(RGUI) LEFT	&hkp RS(RGUI) RIGHT	&hkp RC(RGUI) RIGHT	NONE5
-				&kp C_VOL_DN	&hkp RWIN LEFT		&hkp RWIN UP		&hkp RWIN DOWN		&hkp RWIN RIGHT		NONE5
-								TRANS6
+				&td_bt0			&td_bt1				&td_bt2				&td_bt3				&td_bt4				&none	&none	&none	&none	&none
+				&kp C_VOL_UP 	&hkp RC(RGUI) LEFT	&hkp RS(RGUI) LEFT	&hkp RS(RGUI) RIGHT	&hkp RC(RGUI) RIGHT	&none	&none	&none	&none	&none
+				&kp C_VOL_DN	&hkp RWIN LEFT		&hkp RWIN UP		&hkp RWIN DOWN		&hkp RWIN RIGHT		&none	&none	&none	&none	&none
+								&trans				&trans				&trans				&trans				&trans	&trans
 			>;
 		};
 	};
