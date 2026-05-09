@@ -9,15 +9,35 @@
 #define QWERTY	0
 #define DVORAK	1
 #define COLEMAK	2
-#define EUCALYN	3
-#define FUNC	4
-#define NUMB	5
-#define OTHER	6
+// #define EUCALYN	3
+#define FUNC	3
+#define NUMB	4
+#define OTHER	5
 
-#define NONE &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none \
-             &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none
+#define COMBO(NAME, TM, POS, BIND) NAME {\
+	slow-release; timeout-ms = <TM>;\
+	key-positions = POS; bindings = BIND;\
+}
 
-#define COMBO(NAME, TM, KP, B) NAME { slow-release; timeout-ms = <TM>; key-positions = KP; bindings = B; }
+#define MACRO(NAME, ...) NAME: NAME {\
+	compatible = "zmk,behavior-macro";\
+	#binding-cells = <0>; bindings = __VA_ARGS__;\
+}
+
+#define MACRO_ONE_PARAM(NAME, ...) NAME: NAME {\
+	compatible = "zmk,behavior-macro-one-param";\
+	#binding-cells = <1>; bindings = __VA_ARGS__;\
+}
+
+#define MACRO_TWO_PARAM(NAME, ...) NAME: NAME {\
+	compatible = "zmk,behavior-macro-two-param";\
+	#binding-cells = <2>; bindings = __VA_ARGS__;\
+}
+
+#define TAP_DANCE(NAME, TERM, ...) NAME: NAME {\
+	compatible = "zmk,behavior-tap-dance";\
+	#binding-cells = <0>; tapping-term-ms = <TERM>; bindings = __VA_ARGS__;\
+}
 
 &lt { flavor = "hold-preferred"; };
 &mt { flavor = "hold-preferred"; quick-tap-ms = <300>; };
@@ -26,85 +46,78 @@
 / {
 	behaviors {
 		
-		mkp_2mb1: mkp_2mb1 {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&macro_tap &mkp MB1 &mkp MB1>;
-		};
+		MACRO(mkp_2mb1, <&macro_tap &mkp MB1 &mkp MB1>);
+		MACRO(mkp_3mb1, <&macro_tap &mkp MB1 &mkp MB1 &mkp MB1>);
 		
-		mkp_3mb1: mkp_3mb1 {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&macro_tap &mkp MB1 &mkp MB1 &mkp MB1>;
-		};
-		
-		hkp: hkp {
-			compatible = "zmk,behavior-macro-two-param";
-			#binding-cells = <2>;
-			bindings
-					= <&macro_param_1to1>, <&macro_press &kp MACRO_PLACEHOLDER>
-					, <&macro_param_2to1>, <&macro_press &kp MACRO_PLACEHOLDER>
-					, <&macro_pause_for_release>
-					, <&macro_param_2to1>, <&macro_release &kp MACRO_PLACEHOLDER>
-					, <&macro_param_1to1>, <&macro_release &kp MACRO_PLACEHOLDER>
-			;
-		};
-		
-		home: home {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&macro_tap &kp A &kp S &kp D &kp F &kp SEMI &kp L &kp K &kp J>;
-		};
-		
-		base_layer: base_layer {
-			compatible = "zmk,behavior-tap-dance";
-			#binding-cells = <0>;
-			tapping-term-ms = <1000>;
-			bindings = <&to QWERTY>, <&to DVORAK>, <&to COLEMAK>, <&to EUCALYN>;
-		};
+		MACRO(half, <&macro_tap &kp INT2 &kp GRAVE>);
+		MACRO(home, <&macro_tap &kp A &kp S &kp D &kp F &kp SEMI &kp L &kp K &kp J>);
+
+		MACRO_ONE_PARAM(bt_clr
+			, <&macro_param_1to2>
+			, <&macro_tap &bt BT_SEL MACRO_PLACEHOLDER>
+			, <&macro_tap &bt BT_CLR>
+		);
+
+		MACRO_TWO_PARAM(hkp
+			, <&macro_param_1to1>, <&macro_press &kp MACRO_PLACEHOLDER>
+			, <&macro_param_2to1>, <&macro_press &kp MACRO_PLACEHOLDER>
+			, <&macro_pause_for_release>
+			, <&macro_param_2to1>, <&macro_release &kp MACRO_PLACEHOLDER>
+			, <&macro_param_1to1>, <&macro_release &kp MACRO_PLACEHOLDER>
+		);
+
+		TAP_DANCE(td_grave, 300, <&half>, <&kp INT2>);
+		TAP_DANCE(td_tab, 300, <&kp TAB>, <&hkp LSHFT TAB>);
+		TAP_DANCE(td_bt0, 300, <&bt BT_SEL 0>, <&bt_clr 0>);
+		TAP_DANCE(td_bt1, 300, <&bt BT_SEL 1>, <&bt_clr 1>);
+		TAP_DANCE(td_bt2, 300, <&bt BT_SEL 2>, <&bt_clr 2>);
+		TAP_DANCE(td_bt3, 300, <&bt BT_SEL 3>, <&bt_clr 3>);
+		TAP_DANCE(td_bt4, 300, <&bt BT_SEL 4>, <&bt_clr 4>);
+		TAP_DANCE(td_base, 1000, <&to QWERTY>, <&to DVORAK>, <&to COLEMAK>);
+		// TAP_DANCE(td_base, 1000, <&to QWERTY>, <&to DVORAK>, <&to COLEMAK>, <&to EUCALYN>);
 	};
 	
 	keymap {
 		
 		compatible = "zmk,keymap";
-		base_qwerty {
+		qwerty {
 			bindings = <
 				&kp Q	&kp W		&kp E			&kp R			&kp T			&kp Y			&kp U	&kp I		&kp O		&kp P
 				&kp A	&kp S		&kp D			&kp F			&kp G			&kp H			&kp J	&kp K		&kp L		&kp SEMI
 				&kp Z	&kp X		&kp C			&kp V			&kp B			&kp N			&kp M	&kp COMMA	&kp DOT		&kp SLASH
-						&base_layer	&lt NUMB GRAVE	&lt FUNC SPACE	&lt OTHER TAB	&lt NUMB INT2	&lt FUNC ENTER
+						&td_base	&lt NUMB GRAVE	&lt FUNC SPACE	&lt OTHER TAB	&lt NUMB INT2	&lt FUNC ENTER
 			>;
 		};
-		base_dvorak {
+		dvorak {
 			bindings = <
-				&kp SLASH	&kp COMMA		&kp DOT		&kp P	&kp Y	&kp F	&kp G	&kp C	&kp R	&kp L
-				&kp A		&kp O			&kp E		&kp U	&kp I	&kp D	&kp H	&kp T	&kp N	&kp S
-				&kp SEMI	&kp Q			&kp J		&kp K	&kp X	&kp B	&kp M	&kp W	&kp V	&kp Z
-							&base_layer		&trans		&trans	&trans	&trans	&trans
+				&kp SLASH	&kp COMMA	&kp DOT		&kp P	&kp Y	&kp F	&kp G	&kp C	&kp R	&kp L
+				&kp A		&kp O		&kp E		&kp U	&kp I	&kp D	&kp H	&kp T	&kp N	&kp S
+				&kp SEMI	&kp Q		&kp J		&kp K	&kp X	&kp B	&kp M	&kp W	&kp V	&kp Z
+							&trans		&trans		&trans	&trans	&trans	&trans
 			>;
 		};
-		base_colemak {
+		colemak {
 			bindings = <
-				&kp Q	&kp W		&kp F	&kp P	&kp G	&kp J	&kp L	&kp U		&kp Y	&kp SEMI
-				&kp A	&kp R		&kp S	&kp T	&kp D	&kp H	&kp N	&kp E		&kp I	&kp O
-				&kp Z	&kp X		&kp C	&kp V	&kp B	&kp K	&kp M	&kp COMMA	&kp DOT	&kp SLASH
-						&base_layer	&trans	&trans	&trans	&trans	&trans
+				&kp Q	&kp W	&kp F	&kp P	&kp G	&kp J	&kp L	&kp U		&kp Y	&kp SEMI
+				&kp A	&kp R	&kp S	&kp T	&kp D	&kp H	&kp N	&kp E		&kp I	&kp O
+				&kp Z	&kp X	&kp C	&kp V	&kp B	&kp K	&kp M	&kp COMMA	&kp DOT	&kp SLASH
+						&trans	&trans	&trans	&trans	&trans	&trans
 			>;
 		};
-		base_eucalyn {
-			bindings = <
-				&kp Q	&kp W		&kp COMMA	&kp DOT		&kp SEMI	&kp M	&kp R	&kp D	&kp Y	&kp P
-				&kp A	&kp O		&kp E		&kp I		&kp U		&kp G	&kp T	&kp K	&kp S	&kp N
-				&kp Z	&kp X		&kp C		&kp V		&kp F		&kp B	&kp H	&kp J	&kp L	&kp SLASH
-						&base_layer	&trans		&trans		&trans		&trans	&trans
-			>;
-		};
+		// eucalyn {
+		// 	bindings = <
+		// 		&kp Q	&kp W	&kp COMMA	&kp DOT		&kp SEMI	&kp M	&kp R	&kp D	&kp Y	&kp P
+		// 		&kp A	&kp O	&kp E		&kp I		&kp U		&kp G	&kp T	&kp K	&kp S	&kp N
+		// 		&kp Z	&kp X	&kp C		&kp V		&kp F		&kp B	&kp H	&kp J	&kp L	&kp SLASH
+		// 				&trans	&trans		&trans		&trans		&trans	&trans
+		// 	>;
+		// };
 		function {
 			bindings = <
 				&kp ESC		&kp F2		&kp F3			&kp F4		&kp F5		&kp MINUS	&kp EQUAL	&kp INT3	&mt RGUI INS	&mt RCTRL DEL
 				&kp F6		&kp F7		&kp F8			&kp F9		&kp F10		&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT		&mt RSHFT BSPC
 				&kp PSCRN	&kp SLCK	&kp PAUSE_BREAK	&kp F11		&kp F12		&kp HOME	&kp PG_DN	&kp PG_UP	&kp END			&mt RALT K_APP
-							&trans		&trans			&kp SPACE	&trans		&trans		&kp ENTER
+							&trans		&trans			&trans		&trans		&trans		&trans
 			>;
 		};
 		number {
@@ -112,12 +125,12 @@
 				&kp N1			&kp N2				&kp N3			&kp N4			&kp N5			&kp N1		&kp N2		&kp N3		&mt RGUI N4		&mt RCTRL N5
 				&kp N6			&kp N7				&kp N8			&kp N9			&kp N0			&kp N6		&kp N7		&kp N8		&kp N9			&mt RSHFT SQT
 				&kp KP_SLASH	&kp KP_ASTERISK		&kp KP_MINUS	&kp KP_PLUS		&kp KP_DOT		&kp N0		&kp LBKT	&kp RBKT	&kp NUHS		&mt RALT INT1
-								&trans				&trans			&kp SPACE		&trans			&trans		&kp ENTER
+								&trans				&trans			&trans			&trans			&trans		&trans
 			>;
 		};
 		other {
 			bindings = <
-				&bt BT_SEL 0	&bt BT_SEL 1		&bt BT_SEL 2		&bt BT_SEL 3		&bt BT_SEL 4		&none	&none	&none	&none	&none
+				&td_bt0			&td_bt1				&td_bt2				&td_bt3				&td_bt4				&none	&none	&none	&none	&none
 				&kp C_VOL_UP 	&hkp RC(RGUI) LEFT	&hkp RS(RGUI) LEFT	&hkp RS(RGUI) RIGHT	&hkp RC(RGUI) RIGHT	&none	&none	&none	&none	&none
 				&kp C_VOL_DN	&hkp RWIN LEFT		&hkp RWIN UP		&hkp RWIN DOWN		&hkp RWIN RIGHT		&none	&none	&none	&none	&none
 								&trans				&trans				&trans				&trans				&trans	&trans
@@ -128,6 +141,8 @@
 	combos {
 		
 		compatible = "zmk,combos";
+		
+		COMBO(bootloader, 35, <0 10 20>, <&bootloader>);		COMBO(out_tog, 35, <0 1>, <&out OUT_TOG>);
 		
 		COMBO(single_mb1, 35, <16 17>, <&mkp MB1>);				COMBO(single_mb2, 35, <17 18>, <&mkp MB2>);
 		COMBO(single_mb4, 35, <26 27>, <&mkp MB4>);				COMBO(single_mb5, 35, <27 28>, <&mkp MB5>);
@@ -140,8 +155,7 @@
 		COMBO(hrm_lalt_lgui, 35, <13 14>, <&kp LA(LGUI)>);		COMBO(hrm_lsht_lgui, 35, <11 14>, <&kp LS(LGUI)>);
 		COMBO(hrm_lctl_lgui, 35, <10 14>, <&kp LC(LGUI)>);		COMBO(hrm_lctl_lalt, 35, <10 13>, <&kp LC(LALT)>);
 
-		COMBO(bt_clr, 35, <3 4>, <&bt BT_CLR>);					COMBO(out_tog, 35, <0 1>, <&out OUT_TOG>);
-		COMBO(bootloader, 35, <0 10 20>, <&bootloader>);		COMBO(hrm_lmeh, 35, <10 11 12 13>, <&kp LC(LS(LALT))>);
+		COMBO(hrm_lmeh, 35, <10 11 12 13>, <&kp LC(LS(LALT))>);
 
 		COMBO(home, 35, <13 16>, <&home>);
 	};

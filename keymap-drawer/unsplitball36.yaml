@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: unsplitball36}
 layers:
-  base_qwerty:
+  qwerty:
   - Q
   - W
   - E
@@ -31,13 +31,13 @@ layers:
   - ',<'
   - .>
   - /?
-  - base
+  - qwerty dvorak colemak
   - {t: 半/全, h: number}
   - {t: ␣, h: function}
   - {t: ↹, h: other}
   - {t: あ/ア, h: number}
   - {t: ⏎, h: function}
-  base_dvorak:
+  dvorak:
   - /?
   - ',<'
   - .>
@@ -68,13 +68,13 @@ layers:
   - W
   - V
   - Z
-  - base
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  base_colemak:
+  - {t: ▽, type: trans}
+  colemak:
   - Q
   - W
   - F
@@ -105,44 +105,7 @@ layers:
   - ',<'
   - .>
   - /?
-  - base
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  base_eucalyn:
-  - Q
-  - W
-  - ',<'
-  - .>
-  - ;+
-  - M
-  - R
-  - D
-  - Y
-  - P
-  - A
-  - O
-  - E
-  - I
-  - U
-  - G
-  - T
-  - K
-  - S
-  - N
-  - Z
-  - X
-  - C
-  - V
-  - F
-  - B
-  - H
-  - J
-  - L
-  - /?
-  - base
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -174,17 +137,17 @@ layers:
   - ⎉
   - F11
   - F12
-  - ↖
+  - ⇤
   - ⤒
   - ⤓
-  - ↘
+  - ⇥
   - {t: ≣, h: ⌥}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ␣, type: held}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ⏎, type: held alternate}
+  - {type: held alternate}
   number:
   - 1!
   - 2"
@@ -218,16 +181,16 @@ layers:
   - {t: \_, h: ⌥}
   - {t: ▽, type: trans}
   - {type: held}
-  - ␣
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held alternate}
-  - ⏎
+  - {t: ▽, type: trans}
   other:
-  - ᛒ1
-  - ᛒ2
-  - ᛒ3
-  - ᛒ4
-  - ᛒ5
+  - ᛒ1 ᛒ1x
+  - ᛒ2 ᛒ2x
+  - ᛒ3 ᛒ3x
+  - ᛒ4 ᛒ4x
+  - ᛒ5 ᛒ5x
   - ''
   - ''
   - ''
@@ -260,6 +223,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
+- p: [0, 10, 20]
+  k: boot
+- p: [0, 1]
+  k: ᛒ/ψ
 - p: [16, 17]
   k: Mouse Left
 - p: [17, 18]
@@ -296,12 +263,6 @@ combos:
   k: ^⌘
 - p: [10, 13]
   k: ^⌥
-- p: [3, 4]
-  k: ᛒx
-- p: [0, 1]
-  k: ᛒ/ψ
-- p: [0, 10, 20]
-  k: boot
 - p: [10, 11, 12, 13]
   k: ^⇧⌥
 - p: [13, 16]
