@@ -1,0 +1,10 @@
+[manifest]
+file = west.yml
+path = target/config
+
+[zephyr]
+base = zephyr
+
+[update]
+narrow = true
+
