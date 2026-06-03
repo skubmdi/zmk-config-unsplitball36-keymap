@@ -25,7 +25,7 @@ parse_config:
     "&mkp MB5": "Mouse Forward"
     "&mkp_2mb1": "Double Click"
     "&mkp_3mb1": "Triple Click"
-    "&td_base": "qwerty dvorak colemak"
+    "&td_base": "base layer rotation"
     "&td_tab": "↹ ⇧↹"
     "&td_grave": "half wide"
     "&td_bt0": "ᛒ1 ᛒ1x"
