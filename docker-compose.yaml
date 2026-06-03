@@ -1,0 +1,10 @@
+services:
+  builder:
+    build: .
+    volumes:
+       - ./output:/workspace/output
+       - ./config:/workspace/config:ro
+       - ./:/workspace/extra_module:ro
+       - ./build.sh:/workspace/build.sh:ro
+       - ./build.yaml:/workspace/build.yaml:ro
+    entrypoint: ["/workspace/build.sh"]
