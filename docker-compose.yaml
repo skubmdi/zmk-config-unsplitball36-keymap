@@ -1,14 +1,11 @@
 services:
   zmk-build:
-    restart: always
-    image: zmkfirmware/zmk-build-arm:stable
+    build: .
     volumes:
-       - ./:/workspace/target
-       - ./.west:/workspace/.west
+       - ./output:/workspace/output
+       - ./config:/workspace/config
+       - ./build.sh:/workspace/build.sh
+       - ./build.yaml:/workspace/build.yaml
     environment:
-      - OUTPUT_DIR=${OUTPUT_DIR:-/workspace/target/output}
-      - ZMK_CONFIG=${ZMK_CONFIG:-/workspace/target/config}
-      - BUILD_YAML=${BUILD_YAML:-/workspace/target/build.yaml}
-    working_dir: /workspace
-    tty: true
-    stdin_open: true
+      - ZMK_CONFIG=/workspace/config
+    entrypoint: ["/workspace/build.sh"]
