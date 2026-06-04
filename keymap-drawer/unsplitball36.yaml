@@ -21,7 +21,7 @@ layers:
   - K
   - L
   - ;+
-  - {t: Z, h: other}
+  - Z
   - X
   - C
   - V
@@ -31,11 +31,11 @@ layers:
   - ',<'
   - .>
   - /?
-  - base layer rotation
-  - {t: ↹, h: number}
+  - qwerty dvorak colemak
+  - {t: 半/全, h: number}
   - {t: ␣, h: function}
-  - half wide
-  - {t: ⇧↹, h: number}
+  - {t: ↹, h: other}
+  - {t: あ/ア, h: number}
   - {t: ⏎, h: function}
   dvorak:
   - /?
@@ -104,43 +104,6 @@ layers:
   - M
   - ',<'
   - .>
-  - /?
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  eucalyn:
-  - Q
-  - W
-  - ',<'
-  - .>
-  - ;+
-  - M
-  - R
-  - D
-  - Y
-  - P
-  - A
-  - O
-  - E
-  - I
-  - U
-  - G
-  - T
-  - K
-  - S
-  - N
-  - Z
-  - X
-  - C
-  - V
-  - F
-  - B
-  - H
-  - J
-  - L
   - /?
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -233,7 +196,7 @@ layers:
   - ''
   - ''
   - ''
-  - {t: ▽, type: trans}
+  - 🔊
   - ←⌘^
   - ←⌘⇧
   - ⇧⌘→
@@ -243,7 +206,7 @@ layers:
   - ''
   - ''
   - ''
-  - {type: held}
+  - 🔉
   - ←⌘
   - ↑ ⌘
   - ⌘ ↓
@@ -254,9 +217,9 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
-  - 🔊
-  - 🔉
-  - 🔇
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
@@ -278,8 +241,8 @@ combos:
   k: Triple Click
 - p: [16, 18]
   k: Mouse Wheel
-- p: [13, 16]
-  k: asdf;lkj
+- p: [10, 20]
+  k: 🔇
 - p: [10, 11]
   k: ⌃
 - p: [11, 12]
@@ -302,3 +265,5 @@ combos:
   k: ^⌥
 - p: [10, 11, 12, 13]
   k: ^⇧⌥
+- p: [13, 16]
+  k: asdf;lkj
