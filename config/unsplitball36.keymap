@@ -82,10 +82,10 @@
 		compatible = "zmk,keymap";
 		qwerty {
 			bindings = <
-				&kp Q	&kp W		&kp E			&kp R			&kp T			&kp Y			&kp U	&kp I		&kp O		&kp P
-				&kp A	&kp S		&kp D			&kp F			&kp G			&kp H			&kp J	&kp K		&kp L		&kp SEMI
-				&kp Z	&kp X		&kp C			&kp V			&kp B			&kp N			&kp M	&kp COMMA	&kp DOT		&kp SLASH
-						&td_base	&lt NUMB GRAVE	&lt FUNC SPACE	&lt OTHER TAB	&lt NUMB INT2	&lt FUNC ENTER
+				&kp Q	&kp W		&kp E			&kp R			&kp T				&kp Y			&kp U	&kp I		&kp O		&kp P
+				&kp A	&kp S		&kp D			&kp F			&kp G				&kp H			&kp J	&kp K		&kp L		&kp SEMI
+				&kp Z	&kp X		&kp C			&kp V			&kp B				&kp N			&kp M	&kp COMMA	&kp DOT		&kp SLASH
+						&td_base	&lt NUMB TAB	&lt FUNC SPACE	&lt OTHER  GRAVE	&lt NUMB INT2	&lt FUNC ENTER
 			>;
 		};
 		dvorak {
@@ -131,7 +131,7 @@
 		other {
 			bindings = <
 				&td_bt0			&td_bt1				&td_bt2				&td_bt3				&td_bt4				&none	&none	&none	&none	&none
-				&kp C_VOL_UP 	&hkp RC(RGUI) LEFT	&hkp RS(RGUI) LEFT	&hkp RS(RGUI) RIGHT	&hkp RC(RGUI) RIGHT	&none	&none	&none	&none	&none
+				&kp C_VOL_UP	&hkp RC(RGUI) LEFT	&hkp RS(RGUI) LEFT	&hkp RS(RGUI) RIGHT	&hkp RC(RGUI) RIGHT	&none	&none	&none	&none	&none
 				&kp C_VOL_DN	&hkp RWIN LEFT		&hkp RWIN UP		&hkp RWIN DOWN		&hkp RWIN RIGHT		&none	&none	&none	&none	&none
 								&trans				&trans				&trans				&trans				&trans	&trans
 			>;
