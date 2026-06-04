@@ -32,9 +32,9 @@ layers:
   - .>
   - /?
   - qwerty dvorak colemak
-  - {t: 半/全, h: number}
+  - {t: ↹, h: number}
   - {t: ␣, h: function}
-  - {t: ↹, h: other}
+  - {t: 半/全, h: other}
   - {t: あ/ア, h: number}
   - {t: ⏎, h: function}
   dvorak:
