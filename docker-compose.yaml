@@ -4,5 +4,3 @@ services:
     volumes:
        - ./output:/workspace/output
        - ./:/workspace/zmk-config:ro
-       - ./build.sh:/workspace/build.sh:ro
-    entrypoint: ["/workspace/build.sh"]

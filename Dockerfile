@@ -1,7 +1,5 @@
-FROM zmkfirmware/zmk-build-arm:stable
+FROM ghcr.io/skubmdi/docker-zmk-builder:main
 
 WORKDIR /workspace
 COPY config/west.yml /workspace/config/west.yml
-
-RUN apt update && apt install -y yq
-RUN west init -l /workspace/config && west update && west zephyr-export
+RUN west init -l config && west update && west zephyr-export
