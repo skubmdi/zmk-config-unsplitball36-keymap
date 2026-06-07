@@ -1,6 +1,0 @@
-services:
-  builder:
-    build: .
-    volumes:
-       - ./output:/workspace/output
-       - ./:/workspace/zmk-config:ro
