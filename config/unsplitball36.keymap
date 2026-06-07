@@ -9,10 +9,10 @@
 #define QWERTY	0
 #define DVORAK	1
 #define COLEMAK	2
-// #define EUCALYN	3
-#define FUNC	3
-#define NUMB	4
-#define OTHER	5
+#define EUCALYN	3
+#define FUNC	4
+#define NUMB	5
+#define OTHER	6
 
 #define COMBO(NAME, TM, POS, BIND) NAME {\
 	slow-release; timeout-ms = <TM>;\
@@ -73,8 +73,7 @@
 		TAP_DANCE(td_bt2, 300, <&bt BT_SEL 2>, <&bt_clr 2>);
 		TAP_DANCE(td_bt3, 300, <&bt BT_SEL 3>, <&bt_clr 3>);
 		TAP_DANCE(td_bt4, 300, <&bt BT_SEL 4>, <&bt_clr 4>);
-		TAP_DANCE(td_base, 1000, <&to QWERTY>, <&to DVORAK>, <&to COLEMAK>);
-		// TAP_DANCE(td_base, 1000, <&to QWERTY>, <&to DVORAK>, <&to COLEMAK>, <&to EUCALYN>);
+		TAP_DANCE(td_base, 1000, <&to QWERTY>, <&to DVORAK>, <&to COLEMAK>, <&to EUCALYN>);
 	};
 	
 	keymap {
@@ -104,14 +103,14 @@
 						&trans	&trans	&trans	&trans	&trans	&trans
 			>;
 		};
-		// eucalyn {
-		// 	bindings = <
-		// 		&kp Q	&kp W	&kp COMMA	&kp DOT		&kp SEMI	&kp M	&kp R	&kp D	&kp Y	&kp P
-		// 		&kp A	&kp O	&kp E		&kp I		&kp U		&kp G	&kp T	&kp K	&kp S	&kp N
-		// 		&kp Z	&kp X	&kp C		&kp V		&kp F		&kp B	&kp H	&kp J	&kp L	&kp SLASH
-		// 				&trans	&trans		&trans		&trans		&trans	&trans
-		// 	>;
-		// };
+		eucalyn {
+			bindings = <
+				&kp Q	&kp W	&kp COMMA	&kp DOT		&kp SEMI	&kp M	&kp R	&kp D	&kp Y	&kp P
+				&kp A	&kp O	&kp E		&kp I		&kp U		&kp G	&kp T	&kp K	&kp S	&kp N
+				&kp Z	&kp X	&kp C		&kp V		&kp F		&kp B	&kp H	&kp J	&kp L	&kp SLASH
+						&trans	&trans		&trans		&trans		&trans	&trans
+			>;
+		};
 		function {
 			bindings = <
 				&kp ESC		&kp F2		&kp F3			&kp F4		&kp F5		&kp MINUS	&kp EQUAL	&kp INT3	&mt RGUI INS	&mt RCTRL DEL
