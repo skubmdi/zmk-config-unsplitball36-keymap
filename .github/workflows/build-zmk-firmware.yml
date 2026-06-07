@@ -8,4 +8,4 @@ on:
 
 jobs:
   build:
-    uses: skubmdi/docker-zmk-builder/.github/workflows/publish-builder-iamge.yml@sandbox
+    uses: skubmdi/docker-zmk-builder/.github/workflows/publish-builder-image.yml@sandbox
