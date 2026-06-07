@@ -1,0 +1,14 @@
+name: Build ZMK firmware
+
+on:
+  push:
+    paths:
+      - 'config/west.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: skubmdi/docker-zmk-builder/.github/workflows/publish-builder-image.yml@sandbox
+    permissions: 
+      contents: read
+      packages: write
