@@ -9,3 +9,6 @@ on:
 jobs:
   build:
     uses: skubmdi/docker-zmk-builder/.github/workflows/publish-builder-image.yml@sandbox
+    permissions: 
+      contents: read
+      packages: write
