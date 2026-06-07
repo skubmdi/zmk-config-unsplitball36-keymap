@@ -8,7 +8,4 @@ on:
 
 jobs:
   build:
-    uses: skubmdi/docker-zmk-builder/.github/workflows/publish-builder-image.yml@sandbox
-    permissions: 
-      contents: read
-      packages: write
+    uses: skubmdi/docker-zmk-builder/.github/workflows/build-zmk-firmware.yml@sandbox
