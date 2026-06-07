@@ -1,4 +1,4 @@
-name: Build ZMK firmware
+name: Publish Builder Image
 
 on:
   push:
