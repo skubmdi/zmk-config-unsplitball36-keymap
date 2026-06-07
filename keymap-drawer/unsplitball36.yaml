@@ -31,7 +31,7 @@ layers:
   - ',<'
   - .>
   - /?
-  - qwerty dvorak colemak
+  - toggle base layer
   - {t: ↹, h: number}
   - {t: ␣, h: function}
   - {t: 半/全, h: other}
@@ -104,6 +104,43 @@ layers:
   - M
   - ',<'
   - .>
+  - /?
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  eucalyn:
+  - Q
+  - W
+  - ',<'
+  - .>
+  - ;+
+  - M
+  - R
+  - D
+  - Y
+  - P
+  - A
+  - O
+  - E
+  - I
+  - U
+  - G
+  - T
+  - K
+  - S
+  - N
+  - Z
+  - X
+  - C
+  - V
+  - F
+  - B
+  - H
+  - J
+  - L
   - /?
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
